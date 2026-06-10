@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LandFleisch Futterrechner</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="container">
+    <h1>LandFleisch Futterrechner</h1>
+    <div class="card">
+        <label>Gewicht des Hundes (kg)</label>
+        <input type="number" id="gewicht" value="20">
+        <label>Aktivität</label>
+        <select id="aktivitaet">
+            <option value="95">Normal aktiv</option>
+            <option value="110">Aktiv</option>
+        </select>
+        <label>Futter</label>
+        <select id="produkt"></select>
+        <button onclick="berechnen()">Tagesmenge berechnen</button>
+    </div>
+    <div class="card result">
+        <h2>Ergebnis</h2>
+        <p><strong>Energiebedarf:</strong> <span id="energiebedarf">-</span> kcal/Tag</p>
+        <p><strong>Futter:</strong> <span id="produktname">-</span></p>
+        <p><strong>ME:</strong> <span id="mewert">-</span> kcal/100g</p>
+        <p><strong>Tagesmenge:</strong> <span id="futtermenge">-</span> g</p>
+    </div>
+</div>
+<script src="app.js"></script>
+</body>
+</html>
