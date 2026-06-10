@@ -1,32 +1,49 @@
 let produkte = [];
 
+const felder = {
+  A: {
+    typ: "typA",
+    linie: "linieA",
+    produkt: "produktA",
+    info: "infoA"
+  },
+  B: {
+    typ: "typB",
+    linie: "linieB",
+    produkt: "produktB",
+    info: "infoB"
+  }
+};
+
 document.addEventListener("DOMContentLoaded", () => {
-  document
-    .getElementById("anteilA")
-    .addEventListener("input", () => {
-      aktualisiereAnteil();
+  document.getElementById("anteilA").addEventListener("input", () => {
+    aktualisiereAnteil();
+    berechnenWennMoeglich();
+  });
+
+  document.getElementById("berechnenButton").addEventListener("click", berechnen);
+  document.getElementById("gewicht").addEventListener("input", berechnenWennMoeglich);
+  document.getElementById("aktivitaet").addEventListener("change", berechnenWennMoeglich);
+
+  ["A", "B"].forEach(seite => {
+    document.getElementById(felder[seite].typ).addEventListener("change", () => {
+      fuelleLinien(seite);
+      fuelleProdukte(seite);
+      aktualisiereProduktInfo(seite);
       berechnenWennMoeglich();
     });
 
-  document
-    .getElementById("berechnenButton")
-    .addEventListener("click", berechnen);
+    document.getElementById(felder[seite].linie).addEventListener("change", () => {
+      fuelleProdukte(seite);
+      aktualisiereProduktInfo(seite);
+      berechnenWennMoeglich();
+    });
 
-  document
-    .getElementById("gewicht")
-    .addEventListener("input", berechnenWennMoeglich);
-
-  document
-    .getElementById("aktivitaet")
-    .addEventListener("change", berechnenWennMoeglich);
-
-  document
-    .getElementById("produktA")
-    .addEventListener("change", berechnenWennMoeglich);
-
-  document
-    .getElementById("produktB")
-    .addEventListener("change", berechnenWennMoeglich);
+    document.getElementById(felder[seite].produkt).addEventListener("change", () => {
+      aktualisiereProduktInfo(seite);
+      berechnenWennMoeglich();
+    });
+  });
 
   aktualisiereAnteil();
   ladeProduktdaten();
@@ -49,7 +66,7 @@ async function ladeProduktdaten(){
     validiereProduktdaten(data);
 
     produkte = data;
-    fuelleProduktSelects();
+    initialisiereAuswahl();
     aktiviereRechner();
     berechnen();
   }catch(error){
@@ -60,10 +77,46 @@ async function ladeProduktdaten(){
 
 function validiereProduktdaten(data){
   data.forEach((produkt, index) => {
-    if(!produkt.name || typeof produkt.me_kcal_100g !== "number"){
+    if(!produkt.id || !produkt.name || !produkt.typ || !produkt.linie || typeof produkt.me_kcal_100g !== "number"){
       throw new Error(`Produktdaten unvollständig bei Eintrag ${index + 1}.`);
     }
   });
+}
+
+function initialisiereAuswahl(){
+  ["A", "B"].forEach(seite => {
+    fuelleTypen(seite);
+    fuelleLinien(seite);
+    fuelleProdukte(seite);
+    aktualisiereProduktInfo(seite);
+  });
+
+  setzeStandardAuswahl("A", "Nassfutter", "Classic", "classic_adult_ente_reis");
+  setzeStandardAuswahl("B", "Trockenfutter", "Adult", "trocken_adult_rind_reis");
+}
+
+function setzeStandardAuswahl(seite, typ, linie, produktId){
+  const typSelect = document.getElementById(felder[seite].typ);
+  const linieSelect = document.getElementById(felder[seite].linie);
+  const produktSelect = document.getElementById(felder[seite].produkt);
+
+  if([...typSelect.options].some(o => o.value === typ)){
+    typSelect.value = typ;
+  }
+
+  fuelleLinien(seite);
+
+  if([...linieSelect.options].some(o => o.value === linie)){
+    linieSelect.value = linie;
+  }
+
+  fuelleProdukte(seite);
+
+  if([...produktSelect.options].some(o => o.value === produktId)){
+    produktSelect.value = produktId;
+  }
+
+  aktualisiereProduktInfo(seite);
 }
 
 function zeigeDatenFehler(){
@@ -72,35 +125,77 @@ function zeigeDatenFehler(){
 }
 
 function aktiviereRechner(){
-  document.getElementById("produktA").disabled = false;
-  document.getElementById("produktB").disabled = false;
+  ["A", "B"].forEach(seite => {
+    document.getElementById(felder[seite].typ).disabled = false;
+    document.getElementById(felder[seite].linie).disabled = false;
+    document.getElementById(felder[seite].produkt).disabled = false;
+  });
+
   document.getElementById("berechnenButton").disabled = false;
 }
 
-function fuelleProduktSelects(){
-  const selectA = document.getElementById("produktA");
-  const selectB = document.getElementById("produktB");
+function fuelleTypen(seite){
+  const select = document.getElementById(felder[seite].typ);
+  const typen = [...new Set(produkte.map(p => p.typ))];
 
-  selectA.innerHTML = "";
-  selectB.innerHTML = "";
+  select.innerHTML = "";
 
-  produkte.forEach((produkt, index) => {
-    const optionText = `${produkt.name} – ${produkt.me_kcal_100g} kcal/100 g`;
-
-    const optionA = document.createElement("option");
-    optionA.value = index;
-    optionA.textContent = optionText;
-    selectA.appendChild(optionA);
-
-    const optionB = document.createElement("option");
-    optionB.value = index;
-    optionB.textContent = optionText;
-    selectB.appendChild(optionB);
+  typen.forEach(typ => {
+    const option = document.createElement("option");
+    option.value = typ;
+    option.textContent = typ;
+    select.appendChild(option);
   });
+}
 
-  if(produkte.length > 1){
-    selectB.value = "1";
+function fuelleLinien(seite){
+  const typ = document.getElementById(felder[seite].typ).value;
+  const select = document.getElementById(felder[seite].linie);
+  const linien = [...new Set(produkte.filter(p => p.typ === typ).map(p => p.linie))];
+
+  select.innerHTML = "";
+
+  linien.forEach(linie => {
+    const option = document.createElement("option");
+    option.value = linie;
+    option.textContent = linie;
+    select.appendChild(option);
+  });
+}
+
+function fuelleProdukte(seite){
+  const typ = document.getElementById(felder[seite].typ).value;
+  const linie = document.getElementById(felder[seite].linie).value;
+  const select = document.getElementById(felder[seite].produkt);
+
+  const produktListe = produkte.filter(p => p.typ === typ && p.linie === linie);
+
+  select.innerHTML = "";
+
+  produktListe.forEach(produkt => {
+    const option = document.createElement("option");
+    option.value = produkt.id;
+    option.textContent = `${produkt.name} – ${produkt.me_kcal_100g} kcal/100 g`;
+    select.appendChild(option);
+  });
+}
+
+function getProdukt(seite){
+  const produktId = document.getElementById(felder[seite].produkt).value;
+  return produkte.find(p => p.id === produktId);
+}
+
+function aktualisiereProduktInfo(seite){
+  const produkt = getProdukt(seite);
+  const info = document.getElementById(felder[seite].info);
+
+  if(!produkt){
+    info.textContent = "-";
+    return;
   }
+
+  const quelle = produkt.me_quelle ? `, ME: ${produkt.me_quelle}` : "";
+  info.textContent = `${produkt.me_kcal_100g} kcal/100 g · ${produkt.typ} · ${produkt.linie}${quelle}`;
 }
 
 function aktualisiereAnteil(){
@@ -120,8 +215,6 @@ function berechnenWennMoeglich(){
 function berechnen(){
   const gewicht = Number(document.getElementById("gewicht").value);
   const faktor = Number(document.getElementById("aktivitaet").value);
-  const indexA = document.getElementById("produktA").value;
-  const indexB = document.getElementById("produktB").value;
   const anteilA = Number(document.getElementById("anteilA").value) / 100;
   const anteilB = 1 - anteilA;
 
@@ -130,8 +223,8 @@ function berechnen(){
     return;
   }
 
-  const produktA = produkte[indexA];
-  const produktB = produkte[indexB];
+  const produktA = getProdukt("A");
+  const produktB = getProdukt("B");
 
   if(!produktA || !produktB){
     setzeErgebnisZurueck();
@@ -148,8 +241,7 @@ function berechnen(){
   const grammB = (kcalB / produktB.me_kcal_100g) * 100;
   const gesamt = grammA + grammB;
 
-  document.getElementById("energiebedarf").textContent =
-    energiebedarf.toFixed(0);
+  document.getElementById("energiebedarf").textContent = energiebedarf.toFixed(0);
 
   document.getElementById("produktAName").textContent =
     `${produktA.name} (${produktA.me_kcal_100g} kcal/100 g)`;
@@ -157,20 +249,11 @@ function berechnen(){
   document.getElementById("produktBName").textContent =
     `${produktB.name} (${produktB.me_kcal_100g} kcal/100 g)`;
 
-  document.getElementById("grammA").textContent =
-    grammA.toFixed(0);
-
-  document.getElementById("grammB").textContent =
-    grammB.toFixed(0);
-
-  document.getElementById("kcalA").textContent =
-    kcalA.toFixed(0);
-
-  document.getElementById("kcalB").textContent =
-    kcalB.toFixed(0);
-
-  document.getElementById("gesamtmenge").textContent =
-    gesamt.toFixed(0);
+  document.getElementById("grammA").textContent = grammA.toFixed(0);
+  document.getElementById("grammB").textContent = grammB.toFixed(0);
+  document.getElementById("kcalA").textContent = kcalA.toFixed(0);
+  document.getElementById("kcalB").textContent = kcalB.toFixed(0);
+  document.getElementById("gesamtmenge").textContent = gesamt.toFixed(0);
 }
 
 function setzeErgebnisZurueck(){

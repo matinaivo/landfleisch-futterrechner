@@ -8,7 +8,7 @@
 </head>
 <body>
   <main class="container">
-    <div class="version">v5</div>
+    <div class="version">v6</div>
 
     <h1>LandFleisch Futterrechner</h1>
     <p class="intro">Mischfütterung nach Kalorienanteil auf Basis der metabolischen Energie.</p>
@@ -33,15 +33,35 @@
     <section class="card">
       <h2>Mischfütterung</h2>
 
-      <label for="produktA">Futter 1</label>
-      <select id="produktA" disabled>
-        <option>Produktdaten werden geladen ...</option>
-      </select>
+      <div class="feed-grid">
+        <div class="feed-box">
+          <h3>Futter 1</h3>
+          <label for="typA">Futterart</label>
+          <select id="typA"></select>
 
-      <label for="produktB">Futter 2</label>
-      <select id="produktB" disabled>
-        <option>Produktdaten werden geladen ...</option>
-      </select>
+          <label for="linieA">Produktlinie</label>
+          <select id="linieA"></select>
+
+          <label for="produktA">Produkt</label>
+          <select id="produktA"></select>
+
+          <p id="infoA" class="product-info">-</p>
+        </div>
+
+        <div class="feed-box">
+          <h3>Futter 2</h3>
+          <label for="typB">Futterart</label>
+          <select id="typB"></select>
+
+          <label for="linieB">Produktlinie</label>
+          <select id="linieB"></select>
+
+          <label for="produktB">Produkt</label>
+          <select id="produktB"></select>
+
+          <p id="infoB" class="product-info">-</p>
+        </div>
+      </div>
 
       <label for="anteilA">
         Kalorienanteil Futter 1:
@@ -83,7 +103,7 @@
       </div>
 
       <p class="total"><strong>Gesamtmenge:</strong> <span id="gesamtmenge">-</span> g/Tag</p>
-      <p class="hint">Produktdaten aus der LandFleisch Markenwelt Broschüre Hunde. ME rechnerisch aus Weender-Analyse bestimmt.</p>
+      <p class="hint">Produktdaten sind ein Arbeitsstand. Nassfutter-ME rechnerisch aus Weender-Analyse; Trockenfutter-ME teils Herstellerangabe.</p>
     </section>
   </main>
 

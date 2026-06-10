@@ -15,7 +15,8 @@
     },
     "nfe": 2.7,
     "me_kcal_100g": 109.17,
-    "me_kcal_kg": 1092.0,
+    "me_kcal_kg": 1092,
+    "me_quelle": "berechnet",
     "datenquelle": "LandFleisch Markenwelt Broschüre Hunde PDF"
   },
   {
@@ -34,7 +35,8 @@
     },
     "nfe": 1.7,
     "me_kcal_100g": 109.61,
-    "me_kcal_kg": 1096.0,
+    "me_kcal_kg": 1096,
+    "me_quelle": "berechnet",
     "datenquelle": "LandFleisch Markenwelt Broschüre Hunde PDF"
   },
   {
@@ -53,7 +55,8 @@
     },
     "nfe": 4.2,
     "me_kcal_100g": 93.47,
-    "me_kcal_kg": 935.0,
+    "me_kcal_kg": 935,
+    "me_quelle": "berechnet",
     "datenquelle": "LandFleisch Markenwelt Broschüre Hunde PDF"
   },
   {
@@ -72,7 +75,8 @@
     },
     "nfe": 4.3,
     "me_kcal_100g": 93.83,
-    "me_kcal_kg": 938.0,
+    "me_kcal_kg": 938,
+    "me_quelle": "berechnet",
     "datenquelle": "LandFleisch Markenwelt Broschüre Hunde PDF"
   },
   {
@@ -91,7 +95,8 @@
     },
     "nfe": 2.1,
     "me_kcal_100g": 100.66,
-    "me_kcal_kg": 1007.0,
+    "me_kcal_kg": 1007,
+    "me_quelle": "berechnet",
     "datenquelle": "LandFleisch Markenwelt Broschüre Hunde PDF"
   },
   {
@@ -110,7 +115,8 @@
     },
     "nfe": 3.2,
     "me_kcal_100g": 104.82,
-    "me_kcal_kg": 1048.0,
+    "me_kcal_kg": 1048,
+    "me_quelle": "berechnet",
     "datenquelle": "LandFleisch Markenwelt Broschüre Hunde PDF"
   },
   {
@@ -129,7 +135,8 @@
     },
     "nfe": 3.4,
     "me_kcal_100g": 101.41,
-    "me_kcal_kg": 1014.0,
+    "me_kcal_kg": 1014,
+    "me_quelle": "berechnet",
     "datenquelle": "LandFleisch Markenwelt Broschüre Hunde PDF"
   },
   {
@@ -148,7 +155,8 @@
     },
     "nfe": 2.6,
     "me_kcal_100g": 98.34,
-    "me_kcal_kg": 983.0,
+    "me_kcal_kg": 983,
+    "me_quelle": "berechnet",
     "datenquelle": "LandFleisch Markenwelt Broschüre Hunde PDF"
   },
   {
@@ -167,7 +175,8 @@
     },
     "nfe": 2.5,
     "me_kcal_100g": 108.58,
-    "me_kcal_kg": 1086.0,
+    "me_kcal_kg": 1086,
+    "me_quelle": "berechnet",
     "datenquelle": "LandFleisch Markenwelt Broschüre Hunde PDF"
   },
   {
@@ -186,7 +195,8 @@
     },
     "nfe": 3.9,
     "me_kcal_100g": 81.75,
-    "me_kcal_kg": 818.0,
+    "me_kcal_kg": 818,
+    "me_quelle": "berechnet",
     "datenquelle": "LandFleisch Markenwelt Broschüre Hunde PDF"
   },
   {
@@ -205,7 +215,8 @@
     },
     "nfe": 3.1,
     "me_kcal_100g": 103.98,
-    "me_kcal_kg": 1040.0,
+    "me_kcal_kg": 1040,
+    "me_quelle": "berechnet",
     "datenquelle": "LandFleisch Markenwelt Broschüre Hunde PDF"
   },
   {
@@ -224,12 +235,13 @@
     },
     "nfe": 3.2,
     "me_kcal_100g": 104.82,
-    "me_kcal_kg": 1048.0,
+    "me_kcal_kg": 1048,
+    "me_quelle": "berechnet",
     "datenquelle": "LandFleisch Markenwelt Broschüre Hunde PDF"
   },
   {
     "id": "classic_saison_rinderherzen_reis_wildapfel",
-    "name": "Classic Adult Saison Rinderherzen mit Reis und Wildapfel",
+    "name": "Classic Saison Rinderherzen mit Reis und Wildapfel",
     "typ": "Nassfutter",
     "linie": "Classic Saison",
     "lebensphase": "Adult",
@@ -243,7 +255,8 @@
     },
     "nfe": 4.1,
     "me_kcal_100g": 101.48,
-    "me_kcal_kg": 1015.0,
+    "me_kcal_kg": 1015,
+    "me_quelle": "berechnet",
     "datenquelle": "LandFleisch Markenwelt Broschüre Hunde PDF"
   },
   {
@@ -262,12 +275,13 @@
     },
     "nfe": 4.1,
     "me_kcal_100g": 82.46,
-    "me_kcal_kg": 825.0,
+    "me_kcal_kg": 825,
+    "me_quelle": "berechnet",
     "datenquelle": "LandFleisch Markenwelt Broschüre Hunde PDF"
   },
   {
     "id": "classic_saison_ente_lamm_kartoffeln_wildapfel",
-    "name": "Classic Adult Saison Ente mit Lamm, Kartoffeln und Wildapfel",
+    "name": "Classic Saison Ente mit Lamm, Kartoffeln und Wildapfel",
     "typ": "Nassfutter",
     "linie": "Classic Saison",
     "lebensphase": "Adult",
@@ -281,14 +295,15 @@
     },
     "nfe": 3.0,
     "me_kcal_100g": 97.32,
-    "me_kcal_kg": 973.0,
+    "me_kcal_kg": 973,
+    "me_quelle": "berechnet",
     "datenquelle": "LandFleisch Markenwelt Broschüre Hunde PDF"
   },
   {
     "id": "hypoallergen_adult_pferd",
     "name": "Hypoallergen Adult Pferd",
     "typ": "Nassfutter",
-    "linie": "Dog Care Hypoallergen",
+    "linie": "Hypoallergen",
     "lebensphase": "Adult",
     "zusammensetzung": "68 % Pferd (aus Fleisch, Lungen, Lebern, Mägen, Nieren, Herzen), 30,5 % Pferdebrühe, 1 % Mineralstoffe, 0,3 % Rapsöl, 0,2 % Inulin.",
     "analyse": {
@@ -300,14 +315,15 @@
     },
     "nfe": 5.7,
     "me_kcal_100g": 96.08,
-    "me_kcal_kg": 961.0,
+    "me_kcal_kg": 961,
+    "me_quelle": "berechnet",
     "datenquelle": "LandFleisch Markenwelt Broschüre Hunde PDF"
   },
   {
     "id": "hypoallergen_adult_ziege",
     "name": "Hypoallergen Adult Ziege",
     "typ": "Nassfutter",
-    "linie": "Dog Care Hypoallergen",
+    "linie": "Hypoallergen",
     "lebensphase": "Adult",
     "zusammensetzung": "68 % Ziege (aus Lungen, Lebern, Herzen), 30,5 % Ziegenbrühe, 1 % Mineralstoffe, 0,3 % Rapsöl, 0,2 % Inulin.",
     "analyse": {
@@ -319,14 +335,15 @@
     },
     "nfe": 5.6,
     "me_kcal_100g": 99.96,
-    "me_kcal_kg": 1000.0,
+    "me_kcal_kg": 1000,
+    "me_quelle": "berechnet",
     "datenquelle": "LandFleisch Markenwelt Broschüre Hunde PDF"
   },
   {
     "id": "hypoallergen_adult_kamel",
     "name": "Hypoallergen Adult Kamel",
     "typ": "Nassfutter",
-    "linie": "Dog Care Hypoallergen",
+    "linie": "Hypoallergen",
     "lebensphase": "Adult",
     "zusammensetzung": "68 % Kamel (Fleisch und Innereien), 30,5 % Kamelbrühe, 1 % Mineralstoffe, 0,3 % Rapsöl, 0,2 % Inulin.",
     "analyse": {
@@ -338,7 +355,124 @@
     },
     "nfe": 4.3,
     "me_kcal_100g": 99.29,
-    "me_kcal_kg": 993.0,
+    "me_kcal_kg": 993,
+    "me_quelle": "berechnet",
     "datenquelle": "LandFleisch Markenwelt Broschüre Hunde PDF"
+  },
+  {
+    "id": "trocken_adult_rind_reis",
+    "name": "Dog Trocken Adult Rind mit Reis",
+    "typ": "Trockenfutter",
+    "linie": "Adult",
+    "lebensphase": "Adult",
+    "zusammensetzung": "36 % Fleisch und tierische Nebenerzeugnisse (davon 61 % Rind und 39 % Geflügel), Reis 14 %, Mais, Maisgrieß, 6,35 % Zuckerrübenschnitzel (entzuckert), 6 % Süßkartoffel, 2 % Lignocellulose, Mineralstoffe, 0,5 % Hefe (inaktiviert), 0,2 % Fructooligosaccharide.",
+    "analyse": {
+      "protein": 27.0,
+      "fett": 15.0,
+      "rohfaser": 3.0,
+      "rohasche": 5.5
+    },
+    "me_mj_kg": 16.12,
+    "me_quelle": "Hersteller",
+    "datenquelle": "LandFleisch Produktseite",
+    "me_kcal_kg": 3853,
+    "me_kcal_100g": 385
+  },
+  {
+    "id": "trocken_adult_gefluegel_reis",
+    "name": "Dog Trocken Adult Geflügel mit Reis",
+    "typ": "Trockenfutter",
+    "linie": "Adult",
+    "lebensphase": "Adult",
+    "zusammensetzung": "39 % Fleisch und tierische Nebenerzeugnisse (100 % Geflügel), 26 % Reis, Mais, Maisgrieß, 6 % Zuckerrübenschnitzel (entzuckert), Mineralstoffe, 0,4 % Fructooligosaccharide.",
+    "analyse": {
+      "protein": 25.0,
+      "fett": 13.0,
+      "rohfaser": 2.0,
+      "rohasche": 6.5
+    },
+    "me_mj_kg": 15.86,
+    "me_quelle": "Hersteller",
+    "datenquelle": "LandFleisch Produktseite",
+    "me_kcal_kg": 3791,
+    "me_kcal_100g": 379
+  },
+  {
+    "id": "trocken_senior_gefluegel_reis",
+    "name": "Dog Trocken Senior Geflügel mit Reis",
+    "typ": "Trockenfutter",
+    "linie": "Senior",
+    "lebensphase": "Senior",
+    "zusammensetzung": "34 % Fleisch und tierische Nebenerzeugnisse (100 % Geflügel), Mais, Maisgrieß, 14 % Reis, 5 % Zuckerrübenschnitzel (entzuckert), 5 % Lignocellulose, Mineralstoffe, 0,4 % Fructooligosaccharide.",
+    "analyse": {
+      "protein": 25.0,
+      "fett": 10.0,
+      "rohfaser": 5.0,
+      "rohasche": 6.0
+    },
+    "me_mj_kg": 14.48,
+    "me_quelle": "Hersteller",
+    "datenquelle": "LandFleisch Produktseite",
+    "me_kcal_kg": 3461,
+    "me_kcal_100g": 346
+  },
+  {
+    "id": "trocken_junior_gefluegel_reis",
+    "name": "Dog Trocken Junior Geflügel mit Reis",
+    "typ": "Trockenfutter",
+    "linie": "Junior",
+    "lebensphase": "Junior",
+    "zusammensetzung": "44 % Fleisch und tierische Nebenerzeugnisse (100 % Geflügel), 26 % Reis, Mais, Maisgrieß, 5,6 % Zuckerrübenschnitzel (entzuckert), 2 % Lachsöl, Mineralstoffe, 0,5 % Hefe (inaktiviert), 0,2 % Fructooligosaccharide.",
+    "analyse": {
+      "protein": 28.0,
+      "fett": 16.0,
+      "rohfaser": 1.5,
+      "rohasche": 6.0
+    },
+    "me_mj_kg": 16.72,
+    "me_quelle": "Hersteller",
+    "datenquelle": "LandFleisch Produktseite",
+    "me_kcal_kg": 3996,
+    "me_kcal_100g": 400
+  },
+  {
+    "id": "softbrocken_huhn",
+    "name": "Dog Softbrocken mit Huhn",
+    "typ": "Trockenfutter",
+    "linie": "Softbrocken",
+    "lebensphase": "Adult",
+    "zusammensetzung": "Frisches Geflügel 70 % (davon 39 % Huhn), Kartoffelstärke, Reis, Mais, Maiskleber, Schweineprotein (getrocknet), Geflügelprotein (getrocknet), Rübentrockenschnitzel (entzuckert), Proteinhydrolysat, Fischöl, Leinsamen, Bierhefe (getrocknet), Erbsen (getrocknet, 0,8 %), Gelatine (getrocknet), Cellulosefasern, Sellerie, Karotten, Tomatenmark, Äpfel, Chicorée, Kräuter, Preiselbeeren, Blaubeeren, Ringelblumenblüten.",
+    "analyse": {
+      "protein": 25.0,
+      "fett": 16.0,
+      "rohfaser": 2.0,
+      "rohasche": 6.5,
+      "feuchtigkeit": 19.0
+    },
+    "nfe": 31.5,
+    "me_kcal_100g": 351.2,
+    "me_kcal_kg": 3512,
+    "me_quelle": "berechnet",
+    "datenquelle": "LandFleisch Produktseite"
+  },
+  {
+    "id": "kraftbrocken",
+    "name": "Dog Kraftbrocken",
+    "typ": "Trockenfutter",
+    "linie": "Kraftbrocken",
+    "lebensphase": "Adult",
+    "zusammensetzung": "Geflügel (Huhn, Pute) 23 %, Vollkornmais, Rindfleisch 6 %, Maismehl, Hering 4 %, Sonnenblumenöl, Vollkornreis 5 %, Rübenfaser, Apfeltrester 4 %, Johannisbrotmehl 1 %, Geflügelleber hydrolysiert 1 %, Erbsen 1,5 %, Lachsöl 1 %, Volleipulver, Bierhefe, Meeresalgen, Oregano, Petersilie, Majoran, Salbei, Thymian.",
+    "analyse": {
+      "protein": 25.0,
+      "fett": 9.9,
+      "rohfaser": 2.95,
+      "rohasche": 6.8,
+      "feuchtigkeit": 10.0
+    },
+    "nfe": 45.35,
+    "me_kcal_100g": 349.11,
+    "me_kcal_kg": 3491,
+    "me_quelle": "berechnet_10_prozent_feuchtigkeit",
+    "datenquelle": "LandFleisch Produktseite, Feuchtigkeit geschätzt"
   }
 ]

@@ -7,7 +7,7 @@ body{
 }
 
 .container{
-  max-width:760px;
+  max-width:900px;
   margin:auto;
   position:relative;
 }
@@ -54,9 +54,13 @@ h2{
   margin-top:0;
 }
 
+h3{
+  margin-top:0;
+}
+
 label{
   display:block;
-  margin-top:16px;
+  margin-top:14px;
   font-weight:bold;
 }
 
@@ -97,6 +101,28 @@ button:disabled,
 select:disabled{
   opacity:0.55;
   cursor:not-allowed;
+}
+
+.feed-grid{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:16px;
+}
+
+.feed-box{
+  border:1px solid #e0e0e0;
+  border-radius:10px;
+  padding:16px;
+  background:#fcfcfc;
+}
+
+.product-info{
+  background:#eef7f1;
+  border-radius:8px;
+  padding:10px;
+  color:#245c43;
+  font-size:14px;
+  min-height:38px;
 }
 
 .mix-note{
@@ -143,7 +169,7 @@ select:disabled{
   font-size:13px;
 }
 
-@media (max-width:600px){
+@media (max-width:700px){
   body{
     padding:12px;
   }
@@ -152,6 +178,7 @@ select:disabled{
     font-size:25px;
   }
 
+  .feed-grid,
   .split{
     grid-template-columns:1fr;
   }
