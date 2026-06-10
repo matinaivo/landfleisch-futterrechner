@@ -1,9 +1,110 @@
-body{font-family:Arial,sans-serif;background:#f4f4f4;margin:0;padding:20px}
-.container{max-width:700px;margin:auto}
-h1{text-align:center}
-.card{background:white;padding:20px;margin-bottom:20px;border-radius:10px;box-shadow:0 2px 5px rgba(0,0,0,.1)}
-label{display:block;margin-top:15px}
-input,select{width:100%;padding:10px;margin-top:5px}
-button{width:100%;padding:15px;margin-top:20px;border:none;background:#2d6a4f;color:white;font-size:16px;cursor:pointer}
-button:hover{background:#1b4332}
-.result{font-size:18px}
+body{
+    font-family: Arial, sans-serif;
+    background:#f4f4f4;
+    margin:0;
+    padding:20px;
+    color:#222;
+}
+.container{
+    max-width:760px;
+    margin:auto;
+}
+.version{
+    text-align:right;
+    font-size:14px;
+    color:#666;
+}
+h1{
+    text-align:center;
+    margin-bottom:8px;
+}
+.intro{
+    text-align:center;
+    color:#555;
+    margin-bottom:20px;
+}
+.card{
+    background:white;
+    padding:20px;
+    margin-bottom:20px;
+    border-radius:12px;
+    box-shadow:0 2px 8px rgba(0,0,0,0.10);
+}
+h2{
+    margin-top:0;
+}
+label{
+    display:block;
+    margin-top:16px;
+    font-weight:bold;
+}
+input, select{
+    width:100%;
+    box-sizing:border-box;
+    padding:11px;
+    margin-top:6px;
+    border:1px solid #ccc;
+    border-radius:6px;
+    font-size:16px;
+}
+input[type="range"]{
+    padding:0;
+}
+button{
+    width:100%;
+    padding:15px;
+    margin-top:20px;
+    border:none;
+    border-radius:8px;
+    background:#2d6a4f;
+    color:white;
+    font-size:17px;
+    cursor:pointer;
+}
+button:hover{
+    background:#1b4332;
+}
+.mix-note{
+    color:#555;
+    margin-bottom:0;
+}
+.result{
+    font-size:17px;
+}
+.result-main{
+    background:#eef7f1;
+    padding:14px;
+    border-radius:8px;
+    margin-bottom:16px;
+}
+.label{
+    display:block;
+    color:#555;
+    font-size:14px;
+}
+.split{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:14px;
+}
+.split div{
+    background:#fafafa;
+    padding:14px;
+    border-radius:8px;
+}
+.total{
+    font-size:20px;
+    margin-top:18px;
+}
+.hint{
+    color:#666;
+    font-size:13px;
+}
+@media (max-width:600px){
+    body{
+        padding:12px;
+    }
+    .split{
+        grid-template-columns:1fr;
+    }
+}
