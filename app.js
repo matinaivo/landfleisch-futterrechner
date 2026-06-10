@@ -51,7 +51,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
 async function ladeProduktdaten(){
   try{
-    const response = await fetch("./produkte.json", { cache: "no-store" });
+    const response = await fetch("./produkte.json?v=7", { cache: "no-store" });
 
     if(!response.ok){
       throw new Error("produkte.json konnte nicht geladen werden.");
@@ -86,36 +86,24 @@ function validiereProduktdaten(data){
 function initialisiereAuswahl(){
   ["A", "B"].forEach(seite => {
     fuelleTypen(seite);
-    fuelleLinien(seite);
-    fuelleProdukte(seite);
-    aktualisiereProduktInfo(seite);
   });
 
-  setzeStandardAuswahl("A", "Nassfutter", "Classic", "classic_adult_ente_reis");
-  setzeStandardAuswahl("B", "Trockenfutter", "Adult", "trocken_adult_rind_reis");
+  setzeAuswahl("A", "Nassfutter", "Classic", "classic_adult_ente_reis");
+  setzeAuswahl("B", "Trockenfutter", "Adult", "trocken_adult_rind_reis");
 }
 
-function setzeStandardAuswahl(seite, typ, linie, produktId){
+function setzeAuswahl(seite, typ, linie, produktId){
   const typSelect = document.getElementById(felder[seite].typ);
   const linieSelect = document.getElementById(felder[seite].linie);
   const produktSelect = document.getElementById(felder[seite].produkt);
 
-  if([...typSelect.options].some(o => o.value === typ)){
-    typSelect.value = typ;
-  }
-
+  typSelect.value = typ;
   fuelleLinien(seite);
 
-  if([...linieSelect.options].some(o => o.value === linie)){
-    linieSelect.value = linie;
-  }
-
+  linieSelect.value = linie;
   fuelleProdukte(seite);
 
-  if([...produktSelect.options].some(o => o.value === produktId)){
-    produktSelect.value = produktId;
-  }
-
+  produktSelect.value = produktId;
   aktualisiereProduktInfo(seite);
 }
 
@@ -136,7 +124,7 @@ function aktiviereRechner(){
 
 function fuelleTypen(seite){
   const select = document.getElementById(felder[seite].typ);
-  const typen = [...new Set(produkte.map(p => p.typ))];
+  const typen = getUniqueSorted(produkte.map(p => p.typ));
 
   select.innerHTML = "";
 
@@ -151,7 +139,11 @@ function fuelleTypen(seite){
 function fuelleLinien(seite){
   const typ = document.getElementById(felder[seite].typ).value;
   const select = document.getElementById(felder[seite].linie);
-  const linien = [...new Set(produkte.filter(p => p.typ === typ).map(p => p.linie))];
+  const linien = getUniqueSorted(
+    produkte
+      .filter(p => p.typ === typ)
+      .map(p => p.linie)
+  );
 
   select.innerHTML = "";
 
@@ -175,9 +167,13 @@ function fuelleProdukte(seite){
   produktListe.forEach(produkt => {
     const option = document.createElement("option");
     option.value = produkt.id;
-    option.textContent = `${produkt.name} – ${produkt.me_kcal_100g} kcal/100 g`;
+    option.textContent = produkt.name;
     select.appendChild(option);
   });
+}
+
+function getUniqueSorted(values){
+  return [...new Set(values)].sort((a, b) => a.localeCompare(b, "de"));
 }
 
 function getProdukt(seite){
@@ -194,8 +190,7 @@ function aktualisiereProduktInfo(seite){
     return;
   }
 
-  const quelle = produkt.me_quelle ? `, ME: ${produkt.me_quelle}` : "";
-  info.textContent = `${produkt.me_kcal_100g} kcal/100 g · ${produkt.typ} · ${produkt.linie}${quelle}`;
+  info.textContent = `${produkt.me_kcal_100g} kcal/100 g · ${produkt.typ} · ${produkt.linie}`;
 }
 
 function aktualisiereAnteil(){

@@ -373,10 +373,10 @@
       "rohasche": 5.5
     },
     "me_mj_kg": 16.12,
-    "me_quelle": "Hersteller",
-    "datenquelle": "LandFleisch Produktseite",
     "me_kcal_kg": 3853,
-    "me_kcal_100g": 385
+    "me_kcal_100g": 385,
+    "me_quelle": "Hersteller",
+    "datenquelle": "LandFleisch Produktseite"
   },
   {
     "id": "trocken_adult_gefluegel_reis",
@@ -392,10 +392,10 @@
       "rohasche": 6.5
     },
     "me_mj_kg": 15.86,
-    "me_quelle": "Hersteller",
-    "datenquelle": "LandFleisch Produktseite",
     "me_kcal_kg": 3791,
-    "me_kcal_100g": 379
+    "me_kcal_100g": 379,
+    "me_quelle": "Hersteller",
+    "datenquelle": "LandFleisch Produktseite"
   },
   {
     "id": "trocken_senior_gefluegel_reis",
@@ -411,10 +411,10 @@
       "rohasche": 6.0
     },
     "me_mj_kg": 14.48,
-    "me_quelle": "Hersteller",
-    "datenquelle": "LandFleisch Produktseite",
     "me_kcal_kg": 3461,
-    "me_kcal_100g": 346
+    "me_kcal_100g": 346,
+    "me_quelle": "Hersteller",
+    "datenquelle": "LandFleisch Produktseite"
   },
   {
     "id": "trocken_junior_gefluegel_reis",
@@ -430,10 +430,10 @@
       "rohasche": 6.0
     },
     "me_mj_kg": 16.72,
-    "me_quelle": "Hersteller",
-    "datenquelle": "LandFleisch Produktseite",
     "me_kcal_kg": 3996,
-    "me_kcal_100g": 400
+    "me_kcal_100g": 400,
+    "me_quelle": "Hersteller",
+    "datenquelle": "LandFleisch Produktseite"
   },
   {
     "id": "softbrocken_huhn",

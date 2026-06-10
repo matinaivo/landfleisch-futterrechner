@@ -2,40 +2,41 @@ body{
   font-family: Arial, sans-serif;
   background:#f4f4f4;
   margin:0;
-  padding:20px;
+  padding:16px;
   color:#222;
+  font-size:15px;
 }
 
 .container{
   max-width:900px;
   margin:auto;
-  position:relative;
 }
 
 .version{
   text-align:right;
-  font-size:11px;
+  font-size:10px;
   color:#777;
-  margin-bottom:4px;
+  margin-bottom:3px;
 }
 
 h1{
   text-align:center;
-  margin:0 0 8px 0;
-  font-size:30px;
+  margin:0 0 6px 0;
+  font-size:26px;
 }
 
 .intro{
   text-align:center;
   color:#555;
-  margin-bottom:20px;
+  margin-bottom:18px;
+  font-size:14px;
 }
 
 .card,
 .error{
   background:white;
-  padding:20px;
-  margin-bottom:20px;
+  padding:18px;
+  margin-bottom:18px;
   border-radius:12px;
   box-shadow:0 2px 8px rgba(0,0,0,0.10);
 }
@@ -52,27 +53,30 @@ h1{
 
 h2{
   margin-top:0;
+  font-size:22px;
 }
 
 h3{
   margin-top:0;
+  font-size:17px;
 }
 
 label{
   display:block;
-  margin-top:14px;
+  margin-top:12px;
   font-weight:bold;
+  font-size:14px;
 }
 
 input,
 select{
   width:100%;
   box-sizing:border-box;
-  padding:11px;
-  margin-top:6px;
+  padding:10px;
+  margin-top:5px;
   border:1px solid #ccc;
   border-radius:6px;
-  font-size:16px;
+  font-size:14px;
   background:white;
 }
 
@@ -83,13 +87,13 @@ input[type="range"]{
 
 button{
   width:100%;
-  padding:15px;
-  margin-top:20px;
+  padding:14px;
+  margin-top:18px;
   border:none;
   border-radius:8px;
   background:#2d6a4f;
   color:white;
-  font-size:17px;
+  font-size:16px;
   cursor:pointer;
 }
 
@@ -97,8 +101,7 @@ button:hover{
   background:#1b4332;
 }
 
-button:disabled,
-select:disabled{
+button:disabled{
   opacity:0.55;
   cursor:not-allowed;
 }
@@ -106,76 +109,82 @@ select:disabled{
 .feed-grid{
   display:grid;
   grid-template-columns:1fr 1fr;
-  gap:16px;
+  gap:14px;
 }
 
 .feed-box{
   border:1px solid #e0e0e0;
   border-radius:10px;
-  padding:16px;
+  padding:14px;
   background:#fcfcfc;
 }
 
 .product-info{
   background:#eef7f1;
   border-radius:8px;
-  padding:10px;
+  padding:9px;
   color:#245c43;
-  font-size:14px;
-  min-height:38px;
+  font-size:13px;
+  min-height:34px;
 }
 
 .mix-note{
   color:#555;
   margin-bottom:0;
+  font-size:14px;
 }
 
 .result{
-  font-size:17px;
+  font-size:15px;
 }
 
 .result-main{
   background:#eef7f1;
-  padding:14px;
+  padding:12px;
   border-radius:8px;
-  margin-bottom:16px;
+  margin-bottom:14px;
 }
 
 .label{
   display:block;
   color:#555;
-  font-size:14px;
+  font-size:13px;
 }
 
 .split{
   display:grid;
   grid-template-columns:1fr 1fr;
-  gap:14px;
+  gap:12px;
 }
 
 .split div{
   background:#fafafa;
-  padding:14px;
+  padding:12px;
   border-radius:8px;
 }
 
 .total{
-  font-size:20px;
-  margin-top:18px;
+  font-size:18px;
+  margin-top:16px;
 }
 
 .hint{
   color:#666;
-  font-size:13px;
+  font-size:12px;
 }
 
 @media (max-width:700px){
   body{
-    padding:12px;
+    padding:10px;
+    font-size:14px;
   }
 
   h1{
-    font-size:25px;
+    font-size:23px;
+  }
+
+  .card{
+    padding:16px;
   }
 
   .feed-grid,
