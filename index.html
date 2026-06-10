@@ -4,14 +4,14 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>LandFleisch Futterrechner</title>
-  <link rel="stylesheet" href="style.css?v=7">
+  <link rel="stylesheet" href="style.css?v=8">
 </head>
 <body>
   <main class="container">
-    <div class="version">v7</div>
+    <div class="version">v8</div>
 
     <h1>LandFleisch Futterrechner</h1>
-    <p class="intro">Mischfütterung nach Kalorienanteil auf Basis der metabolischen Energie.</p>
+    <p class="intro">Mischfütterung nach Kalorienanteil oder mit fester Futtermenge.</p>
 
     <section id="datenFehler" class="error hidden">
       Die Produktdaten konnten nicht geladen werden. Bitte prüfen, ob die Datei <strong>produkte.json</strong> im Hauptordner liegt.
@@ -25,9 +25,25 @@
 
       <label for="aktivitaet">Aktivität</label>
       <select id="aktivitaet">
-        <option value="95">Normal aktiv – 95 kcal × kg^0,75</option>
-        <option value="110">Aktiv – 110 kcal × kg^0,75</option>
+        <option value="95">Normal aktiv</option>
+        <option value="110">Aktiv</option>
       </select>
+    </section>
+
+    <section class="card">
+      <h2>Rechenmodus</h2>
+
+      <div class="mode-toggle">
+        <label class="radio-card">
+          <input type="radio" name="rechenmodus" value="prozent" checked>
+          <span>Kalorienanteil</span>
+        </label>
+
+        <label class="radio-card">
+          <input type="radio" name="rechenmodus" value="festeMenge">
+          <span>Feste Futtermenge</span>
+        </label>
+      </div>
     </section>
 
     <section class="card">
@@ -44,6 +60,14 @@
 
           <label for="produktA">Produkt</label>
           <select id="produktA"></select>
+
+          <div id="festeMengeBereich" class="fixed-amount hidden">
+            <label for="mengeA">Menge pro Tag</label>
+            <div class="amount-row">
+              <input type="number" id="mengeA" value="100" min="0" step="1">
+              <span>g</span>
+            </div>
+          </div>
 
           <p id="infoA" class="product-info">-</p>
         </div>
@@ -63,17 +87,28 @@
         </div>
       </div>
 
-      <label for="anteilA">
-        Kalorienanteil Futter 1:
-        <strong><span id="anteilAnzeige">50</span> %</strong>
-      </label>
-      <input type="range" id="anteilA" min="0" max="100" value="50" step="5">
+      <div id="prozentBereich">
+        <label for="anteilA">
+          Kalorienanteil Futter 1:
+          <strong><span id="anteilAnzeige">50</span> %</strong>
+        </label>
+        <input type="range" id="anteilA" min="0" max="100" value="50" step="5">
 
-      <p class="mix-note">
-        Futter 2 erhält automatisch <strong><span id="anteilBAnzeige">50</span> %</strong> der Tageskalorien.
-      </p>
+        <p class="mix-note">
+          Futter 2 erhält automatisch <strong><span id="anteilBAnzeige">50</span> %</strong> der Tageskalorien.
+        </p>
+      </div>
+
+      <div id="festeMengeHinweis" class="mode-note hidden">
+        Futter 1 wird mit der eingegebenen Grammmenge berechnet. Futter 2 ergänzt den verbleibenden Energiebedarf.
+      </div>
 
       <button id="berechnenButton" type="button" disabled>Tagesmenge berechnen</button>
+    </section>
+
+    <section id="warnung" class="warning hidden">
+      <h2>Hinweis</h2>
+      <p id="warnungText">-</p>
     </section>
 
     <section class="card result">
@@ -107,6 +142,6 @@
     </section>
   </main>
 
-  <script src="app.js?v=7"></script>
+  <script src="app.js?v=8"></script>
 </body>
 </html>
