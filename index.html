@@ -1,77 +1,92 @@
 <!DOCTYPE html>
 <html lang="de">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>LandFleisch Futterrechner</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>LandFleisch Futterrechner</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-<div class="container">
-    <div class="version">Version 2</div>
+  <main class="container">
+    <div class="version">v4</div>
+
     <h1>LandFleisch Futterrechner</h1>
-    <p class="intro">Berechnung der täglichen Futtermenge auf Basis der metabolischen Energie und eines kalorienbasierten Mischverhältnisses.</p>
+    <p class="intro">Mischfütterung nach Kalorienanteil auf Basis der metabolischen Energie.</p>
 
-    <div class="card">
-        <h2>Hund</h2>
+    <section id="datenFehler" class="error hidden">
+      Die Produktdaten konnten nicht geladen werden. Bitte prüfen, ob die Datei <strong>produkte.json</strong> im Hauptordner liegt.
+    </section>
 
-        <label for="gewicht">Gewicht des Hundes (kg)</label>
-        <input type="number" id="gewicht" value="20" min="1" step="0.1">
+    <section class="card">
+      <h2>Hund</h2>
 
-        <label for="aktivitaet">Aktivität</label>
-        <select id="aktivitaet">
-            <option value="95">Normal aktiv – 95 kcal × kg^0,75</option>
-            <option value="110">Aktiv – 110 kcal × kg^0,75</option>
-        </select>
-    </div>
+      <label for="gewicht">Gewicht des Hundes (kg)</label>
+      <input type="number" id="gewicht" value="20" min="1" step="0.1">
 
-    <div class="card">
-        <h2>Mischfütterung</h2>
+      <label for="aktivitaet">Aktivität</label>
+      <select id="aktivitaet">
+        <option value="95">Normal aktiv – 95 kcal × kg^0,75</option>
+        <option value="110">Aktiv – 110 kcal × kg^0,75</option>
+      </select>
+    </section>
 
-        <label for="produktA">Futter 1</label>
-        <select id="produktA"></select>
+    <section class="card">
+      <h2>Mischfütterung</h2>
 
-        <label for="produktB">Futter 2</label>
-        <select id="produktB"></select>
+      <label for="produktA">Futter 1</label>
+      <select id="produktA" disabled>
+        <option>Produktdaten werden geladen ...</option>
+      </select>
 
-        <label for="anteilA">Kalorienanteil Futter 1: <span id="anteilAnzeige">50</span> %</label>
-        <input type="range" id="anteilA" min="0" max="100" value="50" step="5" oninput="aktualisiereAnteil()">
+      <label for="produktB">Futter 2</label>
+      <select id="produktB" disabled>
+        <option>Produktdaten werden geladen ...</option>
+      </select>
 
-        <p class="mix-note">
-            Futter 2 erhält automatisch <strong><span id="anteilBAnzeige">50</span> %</strong> der Tageskalorien.
+      <label for="anteilA">
+        Kalorienanteil Futter 1:
+        <strong><span id="anteilAnzeige">50</span> %</strong>
+      </label>
+      <input type="range" id="anteilA" min="0" max="100" value="50" step="5">
+
+      <p class="mix-note">
+        Futter 2 erhält automatisch <strong><span id="anteilBAnzeige">50</span> %</strong> der Tageskalorien.
+      </p>
+
+      <button id="berechnenButton" type="button" disabled>Tagesmenge berechnen</button>
+    </section>
+
+    <section class="card result">
+      <h2>Ergebnis</h2>
+
+      <div class="result-main">
+        <p>
+          <span class="label">Energiebedarf</span>
+          <strong><span id="energiebedarf">-</span> kcal/Tag</strong>
         </p>
+      </div>
 
-        <button onclick="berechnen()">Tagesmenge berechnen</button>
-    </div>
-
-    <div class="card result">
-        <h2>Ergebnis</h2>
-
-        <div class="result-main">
-            <p><span class="label">Energiebedarf</span><strong><span id="energiebedarf">-</span> kcal/Tag</strong></p>
+      <div class="split">
+        <div>
+          <h3>Futter 1</h3>
+          <p id="produktAName">-</p>
+          <p><strong><span id="grammA">-</span> g/Tag</strong></p>
+          <p><span id="kcalA">-</span> kcal</p>
         </div>
 
-        <div class="split">
-            <div>
-                <h3>Futter 1</h3>
-                <p id="produktAName">-</p>
-                <p><strong><span id="grammA">-</span> g/Tag</strong></p>
-                <p><span id="kcalA">-</span> kcal</p>
-            </div>
-
-            <div>
-                <h3>Futter 2</h3>
-                <p id="produktBName">-</p>
-                <p><strong><span id="grammB">-</span> g/Tag</strong></p>
-                <p><span id="kcalB">-</span> kcal</p>
-            </div>
+        <div>
+          <h3>Futter 2</h3>
+          <p id="produktBName">-</p>
+          <p><strong><span id="grammB">-</span> g/Tag</strong></p>
+          <p><span id="kcalB">-</span> kcal</p>
         </div>
+      </div>
 
-        <p class="total"><strong>Gesamtmenge:</strong> <span id="gesamtmenge">-</span> g/Tag</p>
-        <p class="hint">Hinweis: Die Produktdaten sind ein Arbeitsentwurf und werden später verifiziert.</p>
-    </div>
-</div>
+      <p class="total"><strong>Gesamtmenge:</strong> <span id="gesamtmenge">-</span> g/Tag</p>
+      <p class="hint">Hinweis: Die Produktdaten sind ein Arbeitsentwurf und werden später verifiziert.</p>
+    </section>
+  </main>
 
-<script src="app.js"></script>
+  <script src="app.js"></script>
 </body>
 </html>

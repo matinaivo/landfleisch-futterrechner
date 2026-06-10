@@ -1,50 +1,74 @@
 [
   {
+    "id": "gefluegel_extra_mager",
     "name": "Geflügel extra mager",
-    "me": 81.75
+    "typ": "Nassfutter",
+    "me_kcal_100g": 81.75
   },
   {
+    "id": "rind_extra_mager",
     "name": "Rind extra mager",
-    "me": 82.46
+    "typ": "Nassfutter",
+    "me_kcal_100g": 82.46
   },
   {
+    "id": "gefluegel_lachs",
     "name": "Geflügel mit Lachs",
-    "me": 108.58
+    "typ": "Nassfutter",
+    "me_kcal_100g": 108.58
   },
   {
+    "id": "gefluegelherzen_seelachs",
     "name": "Geflügelherzen & Seelachs",
-    "me": 101.41
+    "typ": "Nassfutter",
+    "me_kcal_100g": 101.41
   },
   {
+    "id": "ente_reis",
     "name": "Ente mit Reis",
-    "me": 100.66
+    "typ": "Nassfutter",
+    "me_kcal_100g": 100.66
   },
   {
+    "id": "ente_lamm_wildapfel",
     "name": "Ente mit Lamm & Wildapfel",
-    "me": 97.32
+    "typ": "Nassfutter",
+    "me_kcal_100g": 97.32
   },
   {
+    "id": "rinderpansen",
     "name": "Rinderpansen",
-    "me": 104.82
+    "typ": "Nassfutter",
+    "me_kcal_100g": 104.82
   },
   {
+    "id": "rinderherzen_wildapfel",
     "name": "Rinderherzen & Wildapfel",
-    "me": 101.48
+    "typ": "Nassfutter",
+    "me_kcal_100g": 101.48
   },
   {
+    "id": "senior_rind",
     "name": "Senior Rind",
-    "me": 93.83
+    "typ": "Nassfutter",
+    "me_kcal_100g": 93.83
   },
   {
+    "id": "senior_gefluegel",
     "name": "Senior Geflügel",
-    "me": 93.47
+    "typ": "Nassfutter",
+    "me_kcal_100g": 93.47
   },
   {
+    "id": "junior_huhn_ente",
     "name": "Junior Huhn & Ente",
-    "me": 109.17
+    "typ": "Nassfutter",
+    "me_kcal_100g": 109.17
   },
   {
+    "id": "hypoallergen_ziege",
     "name": "Hypoallergen Ziege",
-    "me": 99.96
+    "typ": "Nassfutter",
+    "me_kcal_100g": 99.96
   }
 ]
