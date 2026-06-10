@@ -85,14 +85,16 @@ function fuelleProduktSelects(){
   selectB.innerHTML = "";
 
   produkte.forEach((produkt, index) => {
+    const optionText = `${produkt.name} – ${produkt.me_kcal_100g} kcal/100 g`;
+
     const optionA = document.createElement("option");
     optionA.value = index;
-    optionA.textContent = produkt.name;
+    optionA.textContent = optionText;
     selectA.appendChild(optionA);
 
     const optionB = document.createElement("option");
     optionB.value = index;
-    optionB.textContent = produkt.name;
+    optionB.textContent = optionText;
     selectB.appendChild(optionB);
   });
 

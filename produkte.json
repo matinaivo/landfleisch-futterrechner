@@ -1,74 +1,344 @@
 [
   {
-    "id": "gefluegel_extra_mager",
-    "name": "Geflügel extra mager",
+    "id": "classic_junior_huhn_ente_kartoffeln",
+    "name": "Classic Junior Huhn und Ente mit Kartoffeln",
     "typ": "Nassfutter",
-    "me_kcal_100g": 81.75
+    "linie": "Classic",
+    "lebensphase": "Junior",
+    "zusammensetzung": "67 % Fleisch und Innereien (davon 26 % Huhn aus Fleisch, Hälsen, Mägen, Herzen, 26 % Ente aus Fleisch, Hälsen, Mägen, Herzen), 19,7 % Geflügelbrühe, 4 % Reismehl, 4 % Kartoffeln, 2 % Karotten, 2 % Erbsen, 1 % Mineralstoffe, 0,2 % Lachsöl, 0,1 % Inulin.",
+    "analyse": {
+      "protein": 11.0,
+      "fett": 6.5,
+      "rohasche": 2.3,
+      "rohfaser": 0.5,
+      "feuchtigkeit": 77.0
+    },
+    "nfe": 2.7,
+    "me_kcal_100g": 109.17,
+    "me_kcal_kg": 1092.0,
+    "datenquelle": "LandFleisch Markenwelt Broschüre Hunde PDF"
   },
   {
-    "id": "rind_extra_mager",
-    "name": "Rind extra mager",
+    "id": "classic_junior_pute",
+    "name": "Classic Junior Pute",
     "typ": "Nassfutter",
-    "me_kcal_100g": 82.46
+    "linie": "Classic",
+    "lebensphase": "Junior",
+    "zusammensetzung": "67 % Fleisch und Innereien (davon 35 % Pute aus Fleisch, Hälsen, Mägen, Herzen), 19,7 % Putenbrühe, 8 % Karotten, 4 % Reismehl, 1 % Mineralstoffe, 0,2 % Lachsöl, 0,1 % Inulin.",
+    "analyse": {
+      "protein": 11.0,
+      "fett": 7.0,
+      "rohasche": 2.3,
+      "rohfaser": 0.5,
+      "feuchtigkeit": 77.5
+    },
+    "nfe": 1.7,
+    "me_kcal_100g": 109.61,
+    "me_kcal_kg": 1096.0,
+    "datenquelle": "LandFleisch Markenwelt Broschüre Hunde PDF"
   },
   {
-    "id": "gefluegel_lachs",
-    "name": "Geflügel mit Lachs",
+    "id": "classic_senior_gefluegel_reis_paprika",
+    "name": "Classic Senior Geflügel mit Reis und Paprika",
     "typ": "Nassfutter",
-    "me_kcal_100g": 108.58
+    "linie": "Classic",
+    "lebensphase": "Senior",
+    "zusammensetzung": "60 % Fleisch und Innereien (davon 30 % Ente aus Fleisch, Hälsen, Mägen, Herzen, 20 % Huhn aus Fleisch, Hälsen, Mägen, Herzen), 23,7 % Geflügelbrühe, 5 % Reis, 5 % rote Paprika, 3 % Karotten, 2 % Erbsen, 1 % Mineralstoffe, 0,2 % Rapsöl, 0,1 % Inulin.",
+    "analyse": {
+      "protein": 8.0,
+      "fett": 5.5,
+      "rohasche": 2.2,
+      "rohfaser": 0.6,
+      "feuchtigkeit": 79.5
+    },
+    "nfe": 4.2,
+    "me_kcal_100g": 93.47,
+    "me_kcal_kg": 935.0,
+    "datenquelle": "LandFleisch Markenwelt Broschüre Hunde PDF"
   },
   {
-    "id": "gefluegelherzen_seelachs",
-    "name": "Geflügelherzen & Seelachs",
+    "id": "classic_senior_rind_reis_kartoffeln",
+    "name": "Classic Senior Rind mit Reis und Kartoffeln",
     "typ": "Nassfutter",
-    "me_kcal_100g": 101.41
+    "linie": "Classic",
+    "lebensphase": "Senior",
+    "zusammensetzung": "62 % Fleisch und Innereien (aus 50 % Rind aus Lungen, Fleisch, Herzen, Nieren, Rinderpansen), 21,7 % Rinderbrühe, 5 % Reis, 5 % Kartoffeln, 5 % Karotten, 1 % Mineralstoffe, 0,2 % Rapsöl, 0,1 % Inulin.",
+    "analyse": {
+      "protein": 8.0,
+      "fett": 5.5,
+      "rohasche": 2.1,
+      "rohfaser": 0.6,
+      "feuchtigkeit": 79.5
+    },
+    "nfe": 4.3,
+    "me_kcal_100g": 93.83,
+    "me_kcal_kg": 938.0,
+    "datenquelle": "LandFleisch Markenwelt Broschüre Hunde PDF"
   },
   {
-    "id": "ente_reis",
-    "name": "Ente mit Reis",
+    "id": "classic_adult_ente_reis",
+    "name": "Classic Adult Ente mit Reis",
     "typ": "Nassfutter",
-    "me_kcal_100g": 100.66
+    "linie": "Classic",
+    "lebensphase": "Adult",
+    "zusammensetzung": "64 % Fleisch und Innereien (davon 40 % Ente aus Fleisch, Hälsen, Mägen, Herzen), 21,7 % Entenbrühe, 5 % Reis, 5 % Karotten, 3 % Erbsen, 0,2 % Rapsöl, 1 % Mineralstoffe, 0,1 % Inulin.",
+    "analyse": {
+      "protein": 9.5,
+      "fett": 6.5,
+      "rohasche": 2.4,
+      "rohfaser": 0.5,
+      "feuchtigkeit": 79.0
+    },
+    "nfe": 2.1,
+    "me_kcal_100g": 100.66,
+    "me_kcal_kg": 1007.0,
+    "datenquelle": "LandFleisch Markenwelt Broschüre Hunde PDF"
   },
   {
-    "id": "ente_lamm_wildapfel",
-    "name": "Ente mit Lamm & Wildapfel",
+    "id": "classic_adult_rinderpansen_reis",
+    "name": "Classic Adult Rinderpansen mit Reis",
     "typ": "Nassfutter",
-    "me_kcal_100g": 97.32
+    "linie": "Classic",
+    "lebensphase": "Adult",
+    "zusammensetzung": "67 % Fleisch und Innereien (davon 30 % Rinderpansen), 21,7 % Rinderbrühe, 5 % Reis, 3 % Karotten, 2 % Erbsen, 1 % Mineralstoffe, 0,2 % Rapsöl, 0,1 % Inulin.",
+    "analyse": {
+      "protein": 9.5,
+      "fett": 6.5,
+      "rohasche": 2.3,
+      "rohfaser": 0.5,
+      "feuchtigkeit": 78.0
+    },
+    "nfe": 3.2,
+    "me_kcal_100g": 104.82,
+    "me_kcal_kg": 1048.0,
+    "datenquelle": "LandFleisch Markenwelt Broschüre Hunde PDF"
   },
   {
-    "id": "rinderpansen",
-    "name": "Rinderpansen",
+    "id": "classic_adult_gefluegelherzen_seelachs",
+    "name": "Classic Adult reich an Geflügelherzen und Seelachs",
     "typ": "Nassfutter",
-    "me_kcal_100g": 104.82
+    "linie": "Classic",
+    "lebensphase": "Adult",
+    "zusammensetzung": "42 % Fleisch und Innereien (davon 20 % Geflügelherzen, 20 % Ente aus Fleisch, Hälsen, Mägen, Herzen, 12 % Huhn aus Fleisch, Hälsen, Mägen, Herzen), 25 % Seelachs, 21,7 % Geflügel- und Fischbrühe, 5 % Reismehl, 3 % Karotten, 2 % Erbsen, 1 % Mineralstoffe, 0,2 % Rapsöl, 0,1 % Inulin.",
+    "analyse": {
+      "protein": 9.5,
+      "fett": 6.0,
+      "rohasche": 2.6,
+      "rohfaser": 0.5,
+      "feuchtigkeit": 78.0
+    },
+    "nfe": 3.4,
+    "me_kcal_100g": 101.41,
+    "me_kcal_kg": 1014.0,
+    "datenquelle": "LandFleisch Markenwelt Broschüre Hunde PDF"
   },
   {
-    "id": "rinderherzen_wildapfel",
-    "name": "Rinderherzen & Wildapfel",
+    "id": "classic_adult_ente_lamm_kartoffeln",
+    "name": "Classic Adult Ente mit Lamm und Kartoffeln",
     "typ": "Nassfutter",
-    "me_kcal_100g": 101.48
+    "linie": "Classic",
+    "lebensphase": "Adult",
+    "zusammensetzung": "65 % Fleisch und Innereien (davon 26 % Ente aus Fleisch, Hälsen, Mägen, Herzen, 20 % Lamm aus Herzen, Lungen, Lebern), 21,7 % Entenbrühe, 5 % Reismehl, 4 % Kartoffeln, 3 % Karotten, 0,2 % Rapsöl, 1 % Mineralstoffe, 0,1 % Inulin.",
+    "analyse": {
+      "protein": 9.5,
+      "fett": 6.0,
+      "rohasche": 2.4,
+      "rohfaser": 0.5,
+      "feuchtigkeit": 79.0
+    },
+    "nfe": 2.6,
+    "me_kcal_100g": 98.34,
+    "me_kcal_kg": 983.0,
+    "datenquelle": "LandFleisch Markenwelt Broschüre Hunde PDF"
   },
   {
-    "id": "senior_rind",
-    "name": "Senior Rind",
+    "id": "classic_adult_gefluegel_lachs",
+    "name": "Classic Adult Geflügel mit Lachs",
     "typ": "Nassfutter",
-    "me_kcal_100g": 93.83
+    "linie": "Classic",
+    "lebensphase": "Adult",
+    "zusammensetzung": "45 % Fleisch und Innereien (davon 30 % Ente aus Fleisch, Hälsen, Mägen, Herzen, 25 % Huhn aus Fleisch, Hälsen, Mägen, Herzen), 25 % Lachs, 19,7 % Geflügel- und Fischbrühe, 4 % Reismehl, 3 % Karotten, 2 % Erbsen, 1 % Mineralstoffe, 0,2 % Rapsöl, 0,1 % Inulin.",
+    "analyse": {
+      "protein": 9.0,
+      "fett": 7.5,
+      "rohasche": 2.5,
+      "rohfaser": 0.5,
+      "feuchtigkeit": 78.0
+    },
+    "nfe": 2.5,
+    "me_kcal_100g": 108.58,
+    "me_kcal_kg": 1086.0,
+    "datenquelle": "LandFleisch Markenwelt Broschüre Hunde PDF"
   },
   {
-    "id": "senior_gefluegel",
-    "name": "Senior Geflügel",
+    "id": "classic_adult_gefluegel_reis_extra_mager",
+    "name": "Classic Adult Geflügel mit Reis extra mager",
     "typ": "Nassfutter",
-    "me_kcal_100g": 93.47
+    "linie": "Classic",
+    "lebensphase": "Adult",
+    "zusammensetzung": "67 % Fleisch und Innereien (davon 30 % Ente aus Fleisch, Hälsen, Mägen, Herzen, 25 % Huhn aus Hälsen, Mägen, Herzen), 17,9 % Geflügelbrühe, 6 % Reis, 5 % Karotten, 3 % Erbsen, 1 % Mineralstoffe, 0,1 % Inulin.",
+    "analyse": {
+      "protein": 10.5,
+      "fett": 3.0,
+      "rohasche": 2.5,
+      "rohfaser": 0.6,
+      "feuchtigkeit": 79.5
+    },
+    "nfe": 3.9,
+    "me_kcal_100g": 81.75,
+    "me_kcal_kg": 818.0,
+    "datenquelle": "LandFleisch Markenwelt Broschüre Hunde PDF"
   },
   {
-    "id": "junior_huhn_ente",
-    "name": "Junior Huhn & Ente",
+    "id": "classic_adult_rinderherzen_nudeln",
+    "name": "Classic Adult Rinderherzen mit Nudeln",
     "typ": "Nassfutter",
-    "me_kcal_100g": 109.17
+    "linie": "Classic",
+    "lebensphase": "Adult",
+    "zusammensetzung": "67 % Fleisch und Innereien (davon 26 % Rinderherzen), 21,7 % Rinderbrühe, 5 % Nudeln, 3 % Karotten, 2 % Erbsen, 1 % Mineralstoffe, 0,2 % Rapsöl, 0,1 % Inulin.",
+    "analyse": {
+      "protein": 9.5,
+      "fett": 6.5,
+      "rohasche": 2.3,
+      "rohfaser": 0.6,
+      "feuchtigkeit": 78.0
+    },
+    "nfe": 3.1,
+    "me_kcal_100g": 103.98,
+    "me_kcal_kg": 1040.0,
+    "datenquelle": "LandFleisch Markenwelt Broschüre Hunde PDF"
   },
   {
-    "id": "hypoallergen_ziege",
-    "name": "Hypoallergen Ziege",
+    "id": "classic_adult_rinderherzen_reis",
+    "name": "Classic Adult Rinderherzen mit Reis",
     "typ": "Nassfutter",
-    "me_kcal_100g": 99.96
+    "linie": "Classic",
+    "lebensphase": "Adult",
+    "zusammensetzung": "67 % Fleisch und Innereien (davon 26 % Rinderherzen), 21,7 % Rinderbrühe, 5 % Reis, 3 % Karotten, 2 % Erbsen, 1 % Mineralstoffe, 0,2 % Rapsöl, 0,1 % Inulin.",
+    "analyse": {
+      "protein": 9.5,
+      "fett": 6.5,
+      "rohasche": 2.3,
+      "rohfaser": 0.5,
+      "feuchtigkeit": 78.0
+    },
+    "nfe": 3.2,
+    "me_kcal_100g": 104.82,
+    "me_kcal_kg": 1048.0,
+    "datenquelle": "LandFleisch Markenwelt Broschüre Hunde PDF"
+  },
+  {
+    "id": "classic_saison_rinderherzen_reis_wildapfel",
+    "name": "Classic Adult Saison Rinderherzen mit Reis und Wildapfel",
+    "typ": "Nassfutter",
+    "linie": "Classic Saison",
+    "lebensphase": "Adult",
+    "zusammensetzung": "67 % Fleisch und Innereien (davon 26 % Rinderherzen), 18,7 % Rinderbrühe, 4 % Reis, 4 % Wildapfel, 3 % Karotten, 2 % Erbsen, 1 % Mineralstoffe, 0,2 % Rapsöl, 0,1 % Inulin.",
+    "analyse": {
+      "protein": 9.0,
+      "fett": 6.0,
+      "rohasche": 2.3,
+      "rohfaser": 0.6,
+      "feuchtigkeit": 78.0
+    },
+    "nfe": 4.1,
+    "me_kcal_100g": 101.48,
+    "me_kcal_kg": 1015.0,
+    "datenquelle": "LandFleisch Markenwelt Broschüre Hunde PDF"
+  },
+  {
+    "id": "classic_adult_rind_reis_extra_mager",
+    "name": "Classic Adult Rind mit Reis extra mager",
+    "typ": "Nassfutter",
+    "linie": "Classic",
+    "lebensphase": "Adult",
+    "zusammensetzung": "67 % Fleisch und Innereien (davon 20 % Rind aus Lungen, Fleisch, Herzen, Lebern, Nieren), 17,9 % Rinderbrühe, 6 % Reis, 5 % Karotten, 3 % Erbsen, 1 % Mineralstoffe, 0,1 % Inulin.",
+    "analyse": {
+      "protein": 10.5,
+      "fett": 3.0,
+      "rohasche": 2.3,
+      "rohfaser": 0.6,
+      "feuchtigkeit": 79.5
+    },
+    "nfe": 4.1,
+    "me_kcal_100g": 82.46,
+    "me_kcal_kg": 825.0,
+    "datenquelle": "LandFleisch Markenwelt Broschüre Hunde PDF"
+  },
+  {
+    "id": "classic_saison_ente_lamm_kartoffeln_wildapfel",
+    "name": "Classic Adult Saison Ente mit Lamm, Kartoffeln und Wildapfel",
+    "typ": "Nassfutter",
+    "linie": "Classic Saison",
+    "lebensphase": "Adult",
+    "zusammensetzung": "65 % Fleisch und Innereien (davon 26 % Ente aus Fleisch, Hälsen, Mägen, Herzen, 20 % Lamm aus Herzen, Lungen, Lebern), 18,7 % Entenbrühe, 4 % Reismehl, 4 % Kartoffeln, 3 % Karotten, 4 % Wildapfel, 1 % Mineralstoffe, 0,2 % Rapsöl, 0,1 % Inulin.",
+    "analyse": {
+      "protein": 9.0,
+      "fett": 6.0,
+      "rohasche": 2.4,
+      "rohfaser": 0.6,
+      "feuchtigkeit": 79.0
+    },
+    "nfe": 3.0,
+    "me_kcal_100g": 97.32,
+    "me_kcal_kg": 973.0,
+    "datenquelle": "LandFleisch Markenwelt Broschüre Hunde PDF"
+  },
+  {
+    "id": "hypoallergen_adult_pferd",
+    "name": "Hypoallergen Adult Pferd",
+    "typ": "Nassfutter",
+    "linie": "Dog Care Hypoallergen",
+    "lebensphase": "Adult",
+    "zusammensetzung": "68 % Pferd (aus Fleisch, Lungen, Lebern, Mägen, Nieren, Herzen), 30,5 % Pferdebrühe, 1 % Mineralstoffe, 0,3 % Rapsöl, 0,2 % Inulin.",
+    "analyse": {
+      "protein": 9.0,
+      "fett": 4.5,
+      "rohasche": 2.0,
+      "rohfaser": 0.3,
+      "feuchtigkeit": 78.5
+    },
+    "nfe": 5.7,
+    "me_kcal_100g": 96.08,
+    "me_kcal_kg": 961.0,
+    "datenquelle": "LandFleisch Markenwelt Broschüre Hunde PDF"
+  },
+  {
+    "id": "hypoallergen_adult_ziege",
+    "name": "Hypoallergen Adult Ziege",
+    "typ": "Nassfutter",
+    "linie": "Dog Care Hypoallergen",
+    "lebensphase": "Adult",
+    "zusammensetzung": "68 % Ziege (aus Lungen, Lebern, Herzen), 30,5 % Ziegenbrühe, 1 % Mineralstoffe, 0,3 % Rapsöl, 0,2 % Inulin.",
+    "analyse": {
+      "protein": 9.0,
+      "fett": 5.0,
+      "rohasche": 2.1,
+      "rohfaser": 0.3,
+      "feuchtigkeit": 78.0
+    },
+    "nfe": 5.6,
+    "me_kcal_100g": 99.96,
+    "me_kcal_kg": 1000.0,
+    "datenquelle": "LandFleisch Markenwelt Broschüre Hunde PDF"
+  },
+  {
+    "id": "hypoallergen_adult_kamel",
+    "name": "Hypoallergen Adult Kamel",
+    "typ": "Nassfutter",
+    "linie": "Dog Care Hypoallergen",
+    "lebensphase": "Adult",
+    "zusammensetzung": "68 % Kamel (Fleisch und Innereien), 30,5 % Kamelbrühe, 1 % Mineralstoffe, 0,3 % Rapsöl, 0,2 % Inulin.",
+    "analyse": {
+      "protein": 9.0,
+      "fett": 5.5,
+      "rohasche": 1.9,
+      "rohfaser": 0.3,
+      "feuchtigkeit": 79.0
+    },
+    "nfe": 4.3,
+    "me_kcal_100g": 99.29,
+    "me_kcal_kg": 993.0,
+    "datenquelle": "LandFleisch Markenwelt Broschüre Hunde PDF"
   }
 ]
