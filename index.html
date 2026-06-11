@@ -4,12 +4,12 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>LandFleisch Futterrechner</title>
-  <link rel="stylesheet" href="style.css?v=18">
+  <link rel="stylesheet" href="style.css?v=21">
 </head>
 <body>
   <main class="container">
     <header class="app-header">
-      <div class="version">v18</div>
+      <div class="version">v21</div>
       <img class="logo" src="landfleisch-logo.jpg" alt="LandFleisch Logo">
       <div class="header-text">
         <h1>Mischfütterungs-Rechner</h1>
@@ -76,6 +76,7 @@
               <input type="number" id="mengeA" value="100" min="0" step="1">
               <span>g</span>
             </div>
+            <div id="energieStatus" class="energy-status">Verbleibende Energie: –</div>
           </div>
 
           <p id="infoA" class="product-info">-</p>
@@ -155,11 +156,11 @@
       <p class="total"><strong>⚖️ Gesamtmenge:</strong> <span id="gesamtmenge">-</span> g/Tag</p>
 
       <p class="hint">
-        Die Berechnung dient als Orientierung für die tägliche Fütterungsmenge auf Basis des Energiebedarfs nach NRC/FEDIAF und der hinterlegten Energiegehalte der Futtermittel. Die Berechnung berücksichtigt ausschließlich den Energiebedarf und bewertet keine vollständige Nährstoffversorgung. Individuelle Faktoren wie Gesundheitszustand, Alter, Kastrationsstatus oder besondere Ernährungsbedürfnisse werden nicht berücksichtigt.
+        Die Berechnung dient als Orientierung für die tägliche Fütterungsmenge auf Basis des Energiebedarfs nach NRC/FEDIAF und der hinterlegten Energiegehalte der Futtermittel. Die Berechnung berücksichtigt ausschließlich den Energiebedarf und bewertet keine vollständige Nährstoffversorgung. Individuelle Faktoren wie Gesundheitszustand, Alter, Kastrationsstatus oder besondere Ernährungsbedürfnisse werden nicht berücksichtigt. Alle Energieangaben beziehen sich auf die metabolisierbare Energie (ME) der Futtermittel.
       </p>
     </section>
   </main>
 
-  <script src="app.js?v=18"></script>
+  <script src="app.js?v=21"></script>
 </body>
 </html>
