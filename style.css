@@ -1,9 +1,22 @@
+/* V17 clean stylesheet */
+:root{
+  --lf-bg:#f7f4ee;
+  --lf-card:#ffffff;
+  --lf-beige:#e8e3d8;
+  --lf-beige-soft:#f3eee3;
+  --lf-green:#355b3e;
+  --lf-green-dark:#24412c;
+  --lf-text:#2f2b28;
+  --lf-muted:#5e574e;
+  --lf-line:#d8cfbf;
+}
+
 body{
-  font-family: Arial, sans-serif;
-  background:#f4f4f4;
+  font-family:Arial,sans-serif;
+  background:var(--lf-bg);
   margin:0;
-  padding:16px;
-  color:#222;
+  padding:14px;
+  color:var(--lf-text);
   font-size:15px;
 }
 
@@ -12,34 +25,70 @@ body{
   margin:auto;
 }
 
-.version{
-  text-align:right;
-  font-size:10px;
-  color:#777;
-  margin-bottom:3px;
+.app-header{
+  position:relative;
+  background:var(--lf-card);
+  color:var(--lf-text);
+  border:1px solid var(--lf-line);
+  border-bottom:3px solid var(--lf-beige);
+  border-radius:16px;
+  padding:14px 16px;
+  margin-bottom:14px;
+  box-shadow:0 2px 8px rgba(47,43,40,0.08);
+  display:grid;
+  grid-template-columns:150px 1fr;
+  gap:18px;
+  align-items:center;
 }
 
-h1{
-  text-align:center;
-  margin:0 0 6px 0;
-  font-size:26px;
+.logo{
+  width:150px;
+  max-width:100%;
+  display:block;
 }
 
-.intro{
-  text-align:center;
-  color:#555;
-  margin-bottom:18px;
+.header-text h1{
+  margin:0 0 5px 0;
+  font-size:25px;
+  line-height:1.12;
+  color:var(--lf-text);
+}
+
+.header-text p{
+  margin:0;
+  color:var(--lf-muted);
   font-size:14px;
+  line-height:1.35;
+}
+
+.version{
+  position:absolute;
+  right:10px;
+  top:8px;
+  font-size:10px;
+  color:var(--lf-muted);
+  background:var(--lf-beige-soft);
+  padding:3px 7px;
+  border-radius:999px;
 }
 
 .card,
 .error,
-.warning{
-  background:white;
+.warning,
+.notice{
+  background:var(--lf-card);
   padding:18px;
-  margin-bottom:18px;
-  border-radius:12px;
-  box-shadow:0 2px 8px rgba(0,0,0,0.10);
+  margin-bottom:16px;
+  border-radius:14px;
+  box-shadow:0 2px 8px rgba(47,43,40,0.10);
+}
+
+.notice{
+  background:var(--lf-beige);
+  color:var(--lf-text);
+  border:1px solid var(--lf-line);
+  font-size:13px;
+  line-height:1.4;
 }
 
 .error{
@@ -49,9 +98,9 @@ h1{
 }
 
 .warning{
-  background:#fff8e6;
-  color:#6b4a00;
-  border:1px solid #e6c56a;
+  background:var(--lf-beige);
+  color:var(--lf-text);
+  border:1px solid var(--lf-line);
 }
 
 .hidden{
@@ -69,6 +118,9 @@ h2{
 h3{
   margin-top:0;
   font-size:17px;
+  display:flex;
+  align-items:center;
+  gap:5px;
 }
 
 .icon{
@@ -79,6 +131,24 @@ h3{
 .icon-small{
   font-size:14px;
   margin-right:3px;
+}
+
+.bowl-icon{
+  width:20px;
+  height:20px;
+  display:inline-block;
+  flex:0 0 20px;
+  background-color:currentColor;
+  -webkit-mask:url("napf-icon.svg") center / contain no-repeat;
+  mask:url("napf-icon.svg") center / contain no-repeat;
+}
+
+.bowl-one{
+  color:#b4976b;
+}
+
+.bowl-two{
+  color:var(--lf-green);
 }
 
 label{
@@ -94,15 +164,23 @@ select{
   box-sizing:border-box;
   padding:10px;
   margin-top:5px;
-  border:1px solid #ccc;
-  border-radius:6px;
+  border:1px solid #cfc8bb;
+  border-radius:8px;
   font-size:14px;
-  background:white;
+  background:#fff;
+  color:var(--lf-text);
+}
+
+input:focus,
+select:focus{
+  outline:2px solid #7a7468;
+  border-color:#7a7468;
 }
 
 input[type="range"]{
   padding:0;
   cursor:pointer;
+  accent-color:var(--lf-green);
 }
 
 button{
@@ -110,15 +188,15 @@ button{
   padding:14px;
   margin-top:18px;
   border:none;
-  border-radius:8px;
-  background:#2d6a4f;
+  border-radius:10px;
+  background:var(--lf-green);
   color:white;
   font-size:16px;
   cursor:pointer;
 }
 
 button:hover{
-  background:#1b4332;
+  background:var(--lf-green-dark);
 }
 
 button:disabled{
@@ -138,9 +216,9 @@ button:disabled{
   gap:8px;
   margin:0;
   padding:12px;
-  border:1px solid #ddd;
+  border:1px solid #d6d0c5;
   border-radius:10px;
-  background:#fcfcfc;
+  background:#faf8f3;
   cursor:pointer;
   font-size:14px;
 }
@@ -148,6 +226,7 @@ button:disabled{
 .radio-card input{
   width:auto;
   margin:0;
+  accent-color:var(--lf-green);
 }
 
 .feed-grid{
@@ -157,17 +236,17 @@ button:disabled{
 }
 
 .feed-box{
-  border:1px solid #e0e0e0;
-  border-radius:10px;
+  border:1px solid #e0d8ca;
+  border-radius:12px;
   padding:14px;
-  background:#fcfcfc;
+  background:#faf8f3;
 }
 
 .product-info{
-  background:#eef7f1;
-  border-radius:8px;
+  background:var(--lf-beige-soft);
+  border-radius:10px;
   padding:9px;
-  color:#245c43;
+  color:var(--lf-green);
   font-size:13px;
   min-height:34px;
 }
@@ -189,13 +268,13 @@ button:disabled{
 }
 
 .badge-complete{
-  background:#dff3e8;
-  color:#245c43;
+  background:var(--lf-beige);
+  color:var(--lf-text);
 }
 
 .badge-supplement{
-  background:#fff0c2;
-  color:#7a5200;
+  background:#f5e6b3;
+  color:#3d2c1f;
 }
 
 .fixed-amount{
@@ -215,13 +294,13 @@ button:disabled{
 
 .mix-note,
 .mode-note{
-  color:#555;
+  color:var(--lf-muted);
   margin-bottom:0;
   font-size:14px;
 }
 
 .mode-note{
-  background:#f5f5f5;
+  background:var(--lf-beige-soft);
   padding:10px;
   border-radius:8px;
   margin-top:14px;
@@ -232,15 +311,15 @@ button:disabled{
 }
 
 .result-main{
-  background:#eef7f1;
+  background:var(--lf-beige-soft);
   padding:12px;
-  border-radius:8px;
+  border-radius:10px;
   margin-bottom:14px;
 }
 
 .label{
   display:block;
-  color:#555;
+  color:var(--lf-muted);
   font-size:13px;
 }
 
@@ -251,9 +330,9 @@ button:disabled{
 }
 
 .split div{
-  background:#fafafa;
+  background:#faf8f3;
   padding:12px;
-  border-radius:8px;
+  border-radius:10px;
 }
 
 .total{
@@ -262,7 +341,7 @@ button:disabled{
 }
 
 .hint{
-  color:#666;
+  color:#6c655d;
   font-size:12px;
   line-height:1.4;
 }
@@ -273,9 +352,41 @@ button:disabled{
     font-size:14px;
   }
 
-  h1{
-    font-size:23px;
-  }
+  .app-header{
+  position:relative;
+  background:var(--lf-card);
+  color:var(--lf-text);
+  border:1px solid var(--lf-line);
+  border-bottom:3px solid var(--lf-beige);
+  border-radius:16px;
+  padding:14px 16px;
+  margin-bottom:14px;
+  box-shadow:0 2px 8px rgba(47,43,40,0.08);
+  display:grid;
+  grid-template-columns:150px 1fr;
+  gap:18px;
+  align-items:center;
+}
+
+  .logo{
+  width:150px;
+  max-width:100%;
+  display:block;
+}
+
+  .header-text h1{
+  margin:0 0 5px 0;
+  font-size:25px;
+  line-height:1.12;
+  color:var(--lf-text);
+}
+
+  .header-text p{
+  margin:0;
+  color:var(--lf-muted);
+  font-size:14px;
+  line-height:1.35;
+}
 
   h2{
     font-size:20px;
@@ -283,7 +394,8 @@ button:disabled{
 
   .card,
   .warning,
-  .error{
+  .error,
+  .notice{
     padding:16px;
     margin-bottom:14px;
   }

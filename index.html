@@ -4,14 +4,22 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>LandFleisch Futterrechner</title>
-  <link rel="stylesheet" href="style.css?v=11">
+  <link rel="stylesheet" href="style.css?v=18">
 </head>
 <body>
   <main class="container">
-    <div class="version">v11</div>
+    <header class="app-header">
+      <div class="version">v18</div>
+      <img class="logo" src="landfleisch-logo.jpg" alt="LandFleisch Logo">
+      <div class="header-text">
+        <h1>Mischfütterungs-Rechner</h1>
+        <p>Die optimale Kombination aus Nass- und Trockenfutter berechnen.</p>
+      </div>
+    </header>
 
-    <h1>LandFleisch Futterrechner</h1>
-    <p class="intro">Mischfütterung nach Kalorienanteil oder mit fester Futtermenge.</p>
+    <section class="notice">
+      Geeignet für die Berechnung von Fütterungsmengen bei ausgewachsenen Hunden und Senioren.
+    </section>
 
     <section id="datenFehler" class="error hidden">
       Die Produktdaten konnten nicht geladen werden. Bitte prüfen, ob die Datei <strong>produkte.json</strong> im Hauptordner liegt.
@@ -31,7 +39,7 @@
     </section>
 
     <section class="card">
-      <h2><span class="icon">⚖️</span> Rechenmodus</h2>
+      <h2><span class="icon">⚙️</span> Rechenmodus</h2>
 
       <div class="mode-toggle">
         <label class="radio-card">
@@ -47,11 +55,12 @@
     </section>
 
     <section class="card">
-      <h2><span class="icon">🥣</span> Mischfütterung</h2>
+      <h2><span class="icon">⚖️</span> Mischfütterung</h2>
 
       <div class="feed-grid">
         <div class="feed-box">
-          <h3>Futter 1</h3>
+          <h3><span class="bowl-icon bowl-one" aria-hidden="true"></span> Futter 1</h3>
+
           <label for="typA">Futterart</label>
           <select id="typA"></select>
 
@@ -73,7 +82,8 @@
         </div>
 
         <div class="feed-box">
-          <h3>Futter 2</h3>
+          <h3><span class="bowl-icon bowl-two" aria-hidden="true"></span> Futter 2</h3>
+
           <label for="typB">Futterart</label>
           <select id="typB"></select>
 
@@ -121,28 +131,28 @@
 
       <div class="result-main">
         <p>
-          <span class="label">Energiebedarf</span>
+          <span class="label">⚡ Energiebedarf</span>
           <strong><span id="energiebedarf">-</span> kcal/Tag</strong>
         </p>
       </div>
 
       <div class="split">
         <div>
-          <h3>Futter 1</h3>
+          <h3><span class="bowl-icon bowl-one" aria-hidden="true"></span> Futter 1</h3>
           <p id="produktAName">-</p>
           <p><strong><span id="grammA">-</span> g/Tag</strong></p>
           <p><span id="kcalA">-</span> kcal</p>
         </div>
 
         <div>
-          <h3>Futter 2</h3>
+          <h3><span class="bowl-icon bowl-two" aria-hidden="true"></span> Futter 2</h3>
           <p id="produktBName">-</p>
           <p><strong><span id="grammB">-</span> g/Tag</strong></p>
           <p><span id="kcalB">-</span> kcal</p>
         </div>
       </div>
 
-      <p class="total"><strong>Gesamtmenge:</strong> <span id="gesamtmenge">-</span> g/Tag</p>
+      <p class="total"><strong>⚖️ Gesamtmenge:</strong> <span id="gesamtmenge">-</span> g/Tag</p>
 
       <p class="hint">
         Die Berechnung dient als Orientierung für die tägliche Fütterungsmenge auf Basis des Energiebedarfs nach NRC/FEDIAF und der hinterlegten Energiegehalte der Futtermittel. Die Berechnung berücksichtigt ausschließlich den Energiebedarf und bewertet keine vollständige Nährstoffversorgung. Individuelle Faktoren wie Gesundheitszustand, Alter, Kastrationsstatus oder besondere Ernährungsbedürfnisse werden nicht berücksichtigt.
@@ -150,6 +160,6 @@
     </section>
   </main>
 
-  <script src="app.js?v=11"></script>
+  <script src="app.js?v=18"></script>
 </body>
 </html>

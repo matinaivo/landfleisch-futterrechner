@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="Futternapf">
+  <path d="M18 28c1.2-6.2 5.8-9.5 14-9.5s12.8 3.3 14 9.5" fill="none" stroke="currentColor" stroke-width="4.5" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M14 30h36l-4 16H18l-4-16z" fill="none" stroke="currentColor" stroke-width="4.5" stroke-linejoin="round"/>
+  <path d="M18 46h28" fill="none" stroke="currentColor" stroke-width="4.5" stroke-linecap="round"/>
+</svg>

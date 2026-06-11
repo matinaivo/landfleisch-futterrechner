@@ -54,7 +54,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
 async function ladeProduktdaten(){
   try{
-    const response = await fetch("./produkte.json?v=11", { cache: "no-store" });
+    const response = await fetch("./produkte.json?v=18", { cache: "no-store" });
 
     if(!response.ok){
       throw new Error("produkte.json konnte nicht geladen werden.");
@@ -81,30 +81,33 @@ async function ladeProduktdaten(){
 
 function validiereProduktdaten(data){
   data.forEach((produkt, index) => {
-    if(!produkt.id || !produkt.name || !produkt.typ || !produkt.linie || typeof produkt.me_kcal_100g !== "number"){
+    if(!produkt.id || !produkt.name || !produkt.typ || !produkt.ui_linie || typeof produkt.me_kcal_100g !== "number"){
       throw new Error(`Produktdaten unvollständig bei Eintrag ${index + 1}.`);
     }
   });
 }
 
+function getAktiveProdukte(){
+  return produkte.filter(p => p.rechner_aktiv !== false);
+}
+
 function initialisiereAuswahl(){
-  ["A", "B"].forEach(seite => fuelleTypen(seite));
+  ["A", "B"].forEach(seite => {
+    fuelleTypen(seite);
+  });
+
   setzeAuswahl("A", "Nassfutter", "Classic", "classic_adult_ente_reis");
   setzeAuswahl("B", "Trockenfutter", "Adult", "trocken_adult_rind_reis");
 }
 
 function setzeAuswahl(seite, typ, linie, produktId){
-  const typSelect = document.getElementById(felder[seite].typ);
-  const linieSelect = document.getElementById(felder[seite].linie);
-  const produktSelect = document.getElementById(felder[seite].produkt);
-
-  typSelect.value = typ;
+  document.getElementById(felder[seite].typ).value = typ;
   fuelleLinien(seite);
 
-  linieSelect.value = linie;
+  document.getElementById(felder[seite].linie).value = linie;
   fuelleProdukte(seite);
 
-  produktSelect.value = produktId;
+  document.getElementById(felder[seite].produkt).value = produktId;
   aktualisiereProduktInfo(seite);
 }
 
@@ -125,7 +128,7 @@ function aktiviereRechner(){
 
 function fuelleTypen(seite){
   const select = document.getElementById(felder[seite].typ);
-  const typen = getUniqueSorted(produkte.map(p => p.typ));
+  const typen = getUniqueSorted(getAktiveProdukte().map(p => p.typ));
 
   select.innerHTML = "";
 
@@ -140,11 +143,11 @@ function fuelleTypen(seite){
 function fuelleLinien(seite){
   const typ = document.getElementById(felder[seite].typ).value;
   const select = document.getElementById(felder[seite].linie);
-  const linien = getUniqueSorted(
-    produkte
+  const linien = sortiereLinien(getUniqueSorted(
+    getAktiveProdukte()
       .filter(p => p.typ === typ)
-      .map(p => p.linie)
-  );
+      .map(p => p.ui_linie)
+  ));
 
   select.innerHTML = "";
 
@@ -160,7 +163,9 @@ function fuelleProdukte(seite){
   const typ = document.getElementById(felder[seite].typ).value;
   const linie = document.getElementById(felder[seite].linie).value;
   const select = document.getElementById(felder[seite].produkt);
-  const produktListe = produkte.filter(p => p.typ === typ && p.linie === linie);
+
+  const produktListe = getAktiveProdukte()
+    .filter(p => p.typ === typ && p.ui_linie === linie);
 
   select.innerHTML = "";
 
@@ -172,13 +177,27 @@ function fuelleProdukte(seite){
   });
 }
 
+function sortiereLinien(linien){
+  const reihenfolge = ["Classic", "Extra mager", "Senior", "Hypoallergen", "Saison", "Adult", "Softbrocken", "Kraftbrocken"];
+  return linien.sort((a, b) => {
+    const ia = reihenfolge.indexOf(a);
+    const ib = reihenfolge.indexOf(b);
+    if(ia === -1 && ib === -1){
+      return a.localeCompare(b, "de");
+    }
+    if(ia === -1) return 1;
+    if(ib === -1) return -1;
+    return ia - ib;
+  });
+}
+
 function getUniqueSorted(values){
   return [...new Set(values)].sort((a, b) => a.localeCompare(b, "de"));
 }
 
 function getProdukt(seite){
   const produktId = document.getElementById(felder[seite].produkt).value;
-  return produkte.find(p => p.id === produktId);
+  return getAktiveProdukte().find(p => p.id === produktId);
 }
 
 function aktualisiereProduktInfo(seite){
@@ -195,7 +214,7 @@ function aktualisiereProduktInfo(seite){
 
   info.innerHTML = `
     <div class="status-row">
-      <span>${produkt.me_kcal_100g} kcal/100 g · ${produkt.typ} · ${produkt.linie}</span>
+      <span>${produkt.me_kcal_100g} kcal/100 g</span>
       <span class="badge ${badgeClass}">${status}</span>
     </div>
   `;
