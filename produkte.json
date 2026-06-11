@@ -17,7 +17,8 @@
     "me_kcal_100g": 109.17,
     "me_kcal_kg": 1092,
     "me_quelle": "berechnet",
-    "datenquelle": "LandFleisch Markenwelt Broschüre Hunde PDF"
+    "datenquelle": "LandFleisch Markenwelt Broschüre Hunde PDF",
+    "futterstatus": "Alleinfutter"
   },
   {
     "id": "classic_junior_pute",
@@ -37,7 +38,8 @@
     "me_kcal_100g": 109.61,
     "me_kcal_kg": 1096,
     "me_quelle": "berechnet",
-    "datenquelle": "LandFleisch Markenwelt Broschüre Hunde PDF"
+    "datenquelle": "LandFleisch Markenwelt Broschüre Hunde PDF",
+    "futterstatus": "Alleinfutter"
   },
   {
     "id": "classic_senior_gefluegel_reis_paprika",
@@ -57,7 +59,8 @@
     "me_kcal_100g": 93.47,
     "me_kcal_kg": 935,
     "me_quelle": "berechnet",
-    "datenquelle": "LandFleisch Markenwelt Broschüre Hunde PDF"
+    "datenquelle": "LandFleisch Markenwelt Broschüre Hunde PDF",
+    "futterstatus": "Alleinfutter"
   },
   {
     "id": "classic_senior_rind_reis_kartoffeln",
@@ -77,7 +80,8 @@
     "me_kcal_100g": 93.83,
     "me_kcal_kg": 938,
     "me_quelle": "berechnet",
-    "datenquelle": "LandFleisch Markenwelt Broschüre Hunde PDF"
+    "datenquelle": "LandFleisch Markenwelt Broschüre Hunde PDF",
+    "futterstatus": "Alleinfutter"
   },
   {
     "id": "classic_adult_ente_reis",
@@ -97,7 +101,8 @@
     "me_kcal_100g": 100.66,
     "me_kcal_kg": 1007,
     "me_quelle": "berechnet",
-    "datenquelle": "LandFleisch Markenwelt Broschüre Hunde PDF"
+    "datenquelle": "LandFleisch Markenwelt Broschüre Hunde PDF",
+    "futterstatus": "Alleinfutter"
   },
   {
     "id": "classic_adult_rinderpansen_reis",
@@ -117,7 +122,8 @@
     "me_kcal_100g": 104.82,
     "me_kcal_kg": 1048,
     "me_quelle": "berechnet",
-    "datenquelle": "LandFleisch Markenwelt Broschüre Hunde PDF"
+    "datenquelle": "LandFleisch Markenwelt Broschüre Hunde PDF",
+    "futterstatus": "Alleinfutter"
   },
   {
     "id": "classic_adult_gefluegelherzen_seelachs",
@@ -137,7 +143,8 @@
     "me_kcal_100g": 101.41,
     "me_kcal_kg": 1014,
     "me_quelle": "berechnet",
-    "datenquelle": "LandFleisch Markenwelt Broschüre Hunde PDF"
+    "datenquelle": "LandFleisch Markenwelt Broschüre Hunde PDF",
+    "futterstatus": "Alleinfutter"
   },
   {
     "id": "classic_adult_ente_lamm_kartoffeln",
@@ -157,7 +164,8 @@
     "me_kcal_100g": 98.34,
     "me_kcal_kg": 983,
     "me_quelle": "berechnet",
-    "datenquelle": "LandFleisch Markenwelt Broschüre Hunde PDF"
+    "datenquelle": "LandFleisch Markenwelt Broschüre Hunde PDF",
+    "futterstatus": "Alleinfutter"
   },
   {
     "id": "classic_adult_gefluegel_lachs",
@@ -177,7 +185,8 @@
     "me_kcal_100g": 108.58,
     "me_kcal_kg": 1086,
     "me_quelle": "berechnet",
-    "datenquelle": "LandFleisch Markenwelt Broschüre Hunde PDF"
+    "datenquelle": "LandFleisch Markenwelt Broschüre Hunde PDF",
+    "futterstatus": "Alleinfutter"
   },
   {
     "id": "classic_adult_gefluegel_reis_extra_mager",
@@ -197,7 +206,8 @@
     "me_kcal_100g": 81.75,
     "me_kcal_kg": 818,
     "me_quelle": "berechnet",
-    "datenquelle": "LandFleisch Markenwelt Broschüre Hunde PDF"
+    "datenquelle": "LandFleisch Markenwelt Broschüre Hunde PDF",
+    "futterstatus": "Alleinfutter"
   },
   {
     "id": "classic_adult_rinderherzen_nudeln",
@@ -217,7 +227,8 @@
     "me_kcal_100g": 103.98,
     "me_kcal_kg": 1040,
     "me_quelle": "berechnet",
-    "datenquelle": "LandFleisch Markenwelt Broschüre Hunde PDF"
+    "datenquelle": "LandFleisch Markenwelt Broschüre Hunde PDF",
+    "futterstatus": "Alleinfutter"
   },
   {
     "id": "classic_adult_rinderherzen_reis",
@@ -237,7 +248,8 @@
     "me_kcal_100g": 104.82,
     "me_kcal_kg": 1048,
     "me_quelle": "berechnet",
-    "datenquelle": "LandFleisch Markenwelt Broschüre Hunde PDF"
+    "datenquelle": "LandFleisch Markenwelt Broschüre Hunde PDF",
+    "futterstatus": "Alleinfutter"
   },
   {
     "id": "classic_saison_rinderherzen_reis_wildapfel",
@@ -257,7 +269,8 @@
     "me_kcal_100g": 101.48,
     "me_kcal_kg": 1015,
     "me_quelle": "berechnet",
-    "datenquelle": "LandFleisch Markenwelt Broschüre Hunde PDF"
+    "datenquelle": "LandFleisch Markenwelt Broschüre Hunde PDF",
+    "futterstatus": "Alleinfutter"
   },
   {
     "id": "classic_adult_rind_reis_extra_mager",
@@ -277,7 +290,8 @@
     "me_kcal_100g": 82.46,
     "me_kcal_kg": 825,
     "me_quelle": "berechnet",
-    "datenquelle": "LandFleisch Markenwelt Broschüre Hunde PDF"
+    "datenquelle": "LandFleisch Markenwelt Broschüre Hunde PDF",
+    "futterstatus": "Alleinfutter"
   },
   {
     "id": "classic_saison_ente_lamm_kartoffeln_wildapfel",
@@ -297,7 +311,8 @@
     "me_kcal_100g": 97.32,
     "me_kcal_kg": 973,
     "me_quelle": "berechnet",
-    "datenquelle": "LandFleisch Markenwelt Broschüre Hunde PDF"
+    "datenquelle": "LandFleisch Markenwelt Broschüre Hunde PDF",
+    "futterstatus": "Alleinfutter"
   },
   {
     "id": "hypoallergen_adult_pferd",
@@ -317,7 +332,8 @@
     "me_kcal_100g": 96.08,
     "me_kcal_kg": 961,
     "me_quelle": "berechnet",
-    "datenquelle": "LandFleisch Markenwelt Broschüre Hunde PDF"
+    "datenquelle": "LandFleisch Markenwelt Broschüre Hunde PDF",
+    "futterstatus": "Alleinfutter"
   },
   {
     "id": "hypoallergen_adult_ziege",
@@ -337,7 +353,8 @@
     "me_kcal_100g": 99.96,
     "me_kcal_kg": 1000,
     "me_quelle": "berechnet",
-    "datenquelle": "LandFleisch Markenwelt Broschüre Hunde PDF"
+    "datenquelle": "LandFleisch Markenwelt Broschüre Hunde PDF",
+    "futterstatus": "Alleinfutter"
   },
   {
     "id": "hypoallergen_adult_kamel",
@@ -357,7 +374,8 @@
     "me_kcal_100g": 99.29,
     "me_kcal_kg": 993,
     "me_quelle": "berechnet",
-    "datenquelle": "LandFleisch Markenwelt Broschüre Hunde PDF"
+    "datenquelle": "LandFleisch Markenwelt Broschüre Hunde PDF",
+    "futterstatus": "Alleinfutter"
   },
   {
     "id": "trocken_adult_rind_reis",
@@ -376,7 +394,8 @@
     "me_kcal_kg": 3853,
     "me_kcal_100g": 385,
     "me_quelle": "Hersteller",
-    "datenquelle": "LandFleisch Produktseite"
+    "datenquelle": "LandFleisch Produktseite",
+    "futterstatus": "Alleinfutter"
   },
   {
     "id": "trocken_adult_gefluegel_reis",
@@ -395,7 +414,8 @@
     "me_kcal_kg": 3791,
     "me_kcal_100g": 379,
     "me_quelle": "Hersteller",
-    "datenquelle": "LandFleisch Produktseite"
+    "datenquelle": "LandFleisch Produktseite",
+    "futterstatus": "Alleinfutter"
   },
   {
     "id": "trocken_senior_gefluegel_reis",
@@ -414,7 +434,8 @@
     "me_kcal_kg": 3461,
     "me_kcal_100g": 346,
     "me_quelle": "Hersteller",
-    "datenquelle": "LandFleisch Produktseite"
+    "datenquelle": "LandFleisch Produktseite",
+    "futterstatus": "Alleinfutter"
   },
   {
     "id": "trocken_junior_gefluegel_reis",
@@ -433,7 +454,8 @@
     "me_kcal_kg": 3996,
     "me_kcal_100g": 400,
     "me_quelle": "Hersteller",
-    "datenquelle": "LandFleisch Produktseite"
+    "datenquelle": "LandFleisch Produktseite",
+    "futterstatus": "Alleinfutter"
   },
   {
     "id": "softbrocken_huhn",
@@ -453,7 +475,8 @@
     "me_kcal_100g": 351.2,
     "me_kcal_kg": 3512,
     "me_quelle": "berechnet",
-    "datenquelle": "LandFleisch Produktseite"
+    "datenquelle": "LandFleisch Produktseite",
+    "futterstatus": "Alleinfutter"
   },
   {
     "id": "kraftbrocken",
@@ -473,6 +496,7 @@
     "me_kcal_100g": 349.11,
     "me_kcal_kg": 3491,
     "me_quelle": "berechnet_10_prozent_feuchtigkeit",
-    "datenquelle": "LandFleisch Produktseite, Feuchtigkeit geschätzt"
+    "datenquelle": "LandFleisch Produktseite, Feuchtigkeit geschätzt",
+    "futterstatus": "Alleinfutter"
   }
 ]

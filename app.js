@@ -1,18 +1,8 @@
 let produkte = [];
 
 const felder = {
-  A: {
-    typ: "typA",
-    linie: "linieA",
-    produkt: "produktA",
-    info: "infoA"
-  },
-  B: {
-    typ: "typB",
-    linie: "linieB",
-    produkt: "produktB",
-    info: "infoB"
-  }
+  A: { typ: "typA", linie: "linieA", produkt: "produktA", info: "infoA" },
+  B: { typ: "typB", linie: "linieB", produkt: "produktB", info: "infoB" }
 };
 
 document.addEventListener("DOMContentLoaded", () => {
@@ -39,17 +29,20 @@ document.addEventListener("DOMContentLoaded", () => {
       fuelleLinien(seite);
       fuelleProdukte(seite);
       aktualisiereProduktInfo(seite);
+      aktualisiereFutterstatusWarnung();
       berechnenWennMoeglich();
     });
 
     document.getElementById(felder[seite].linie).addEventListener("change", () => {
       fuelleProdukte(seite);
       aktualisiereProduktInfo(seite);
+      aktualisiereFutterstatusWarnung();
       berechnenWennMoeglich();
     });
 
     document.getElementById(felder[seite].produkt).addEventListener("change", () => {
       aktualisiereProduktInfo(seite);
+      aktualisiereFutterstatusWarnung();
       berechnenWennMoeglich();
     });
   });
@@ -61,7 +54,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
 async function ladeProduktdaten(){
   try{
-    const response = await fetch("./produkte.json?v=8", { cache: "no-store" });
+    const response = await fetch("./produkte.json?v=11", { cache: "no-store" });
 
     if(!response.ok){
       throw new Error("produkte.json konnte nicht geladen werden.");
@@ -79,6 +72,7 @@ async function ladeProduktdaten(){
     initialisiereAuswahl();
     aktiviereRechner();
     berechnen();
+    aktualisiereFutterstatusWarnung();
   }catch(error){
     console.error(error);
     zeigeDatenFehler();
@@ -94,10 +88,7 @@ function validiereProduktdaten(data){
 }
 
 function initialisiereAuswahl(){
-  ["A", "B"].forEach(seite => {
-    fuelleTypen(seite);
-  });
-
+  ["A", "B"].forEach(seite => fuelleTypen(seite));
   setzeAuswahl("A", "Nassfutter", "Classic", "classic_adult_ente_reis");
   setzeAuswahl("B", "Trockenfutter", "Adult", "trocken_adult_rind_reis");
 }
@@ -169,7 +160,6 @@ function fuelleProdukte(seite){
   const typ = document.getElementById(felder[seite].typ).value;
   const linie = document.getElementById(felder[seite].linie).value;
   const select = document.getElementById(felder[seite].produkt);
-
   const produktListe = produkte.filter(p => p.typ === typ && p.linie === linie);
 
   select.innerHTML = "";
@@ -200,7 +190,44 @@ function aktualisiereProduktInfo(seite){
     return;
   }
 
-  info.textContent = `${produkt.me_kcal_100g} kcal/100 g · ${produkt.typ} · ${produkt.linie}`;
+  const status = produkt.futterstatus || "Alleinfutter";
+  const badgeClass = status === "Ergänzungsfutter" ? "badge-supplement" : "badge-complete";
+
+  info.innerHTML = `
+    <div class="status-row">
+      <span>${produkt.me_kcal_100g} kcal/100 g · ${produkt.typ} · ${produkt.linie}</span>
+      <span class="badge ${badgeClass}">${status}</span>
+    </div>
+  `;
+}
+
+function aktualisiereFutterstatusWarnung(){
+  const produktA = getProdukt("A");
+  const produktB = getProdukt("B");
+  const warnung = document.getElementById("statusWarnung");
+  const text = document.getElementById("statusWarnungText");
+
+  if(!produktA || !produktB){
+    warnung.classList.add("hidden");
+    text.textContent = "-";
+    return;
+  }
+
+  const statusA = produktA.futterstatus || "Alleinfutter";
+  const statusB = produktB.futterstatus || "Alleinfutter";
+  const ergaenzungA = statusA === "Ergänzungsfutter";
+  const ergaenzungB = statusB === "Ergänzungsfutter";
+
+  if(ergaenzungA && ergaenzungB){
+    text.textContent = "Beide ausgewählten Produkte sind als Ergänzungsfutter gekennzeichnet und nicht für die alleinige Versorgung des Hundes vorgesehen.";
+    warnung.classList.remove("hidden");
+  }else if(ergaenzungA || ergaenzungB){
+    text.textContent = "Mindestens eines der ausgewählten Produkte ist als Ergänzungsfutter gekennzeichnet und nicht für die alleinige Versorgung des Hundes vorgesehen.";
+    warnung.classList.remove("hidden");
+  }else{
+    warnung.classList.add("hidden");
+    text.textContent = "-";
+  }
 }
 
 function getRechenmodus(){
@@ -266,6 +293,8 @@ function berechnen(){
   }else{
     berechneProzent(energiebedarf, produktA, produktB);
   }
+
+  aktualisiereFutterstatusWarnung();
 }
 
 function berechneProzent(energiebedarf, produktA, produktB){

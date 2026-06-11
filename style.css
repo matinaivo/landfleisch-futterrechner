@@ -61,11 +61,24 @@ h1{
 h2{
   margin-top:0;
   font-size:22px;
+  display:flex;
+  align-items:center;
+  gap:7px;
 }
 
 h3{
   margin-top:0;
   font-size:17px;
+}
+
+.icon{
+  font-size:20px;
+  line-height:1;
+}
+
+.icon-small{
+  font-size:14px;
+  margin-right:3px;
 }
 
 label{
@@ -159,6 +172,32 @@ button:disabled{
   min-height:34px;
 }
 
+.status-row{
+  display:flex;
+  flex-wrap:wrap;
+  align-items:center;
+  gap:6px;
+}
+
+.badge{
+  display:inline-block;
+  padding:3px 8px;
+  border-radius:999px;
+  font-size:11px;
+  line-height:1.4;
+  white-space:nowrap;
+}
+
+.badge-complete{
+  background:#dff3e8;
+  color:#245c43;
+}
+
+.badge-supplement{
+  background:#fff0c2;
+  color:#7a5200;
+}
+
 .fixed-amount{
   margin-top:4px;
 }
@@ -225,6 +264,7 @@ button:disabled{
 .hint{
   color:#666;
   font-size:12px;
+  line-height:1.4;
 }
 
 @media (max-width:700px){
@@ -235,6 +275,10 @@ button:disabled{
 
   h1{
     font-size:23px;
+  }
+
+  h2{
+    font-size:20px;
   }
 
   .card,
