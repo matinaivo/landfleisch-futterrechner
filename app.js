@@ -54,7 +54,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
 async function ladeProduktdaten(){
   try{
-    const response = await fetch("./produkte.json?v=21", { cache: "no-store" });
+    const response = await fetch("./produkte.json?v=22", { cache: "no-store" });
 
     if(!response.ok){
       throw new Error("produkte.json konnte nicht geladen werden.");

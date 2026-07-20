@@ -309,9 +309,10 @@
     "me_quelle": "berechnet",
     "datenquelle": "LandFleisch Markenwelt Broschüre Hunde PDF",
     "futterstatus": "Alleinfutter",
-    "rechner_aktiv": true,
+    "rechner_aktiv": false,
     "besonderheit": "Standard",
-    "ui_linie": "Saison"
+    "ui_linie": "Saison",
+    "rechner_hinweis": "Produktlinie aktuell nicht für den Rechner freigegeben."
   },
   {
     "id": "classic_adult_rind_reis_extra_mager",
@@ -357,9 +358,10 @@
     "me_quelle": "berechnet",
     "datenquelle": "LandFleisch Markenwelt Broschüre Hunde PDF",
     "futterstatus": "Alleinfutter",
-    "rechner_aktiv": true,
+    "rechner_aktiv": false,
     "besonderheit": "Standard",
-    "ui_linie": "Saison"
+    "ui_linie": "Saison",
+    "rechner_hinweis": "Produktlinie aktuell nicht für den Rechner freigegeben."
   },
   {
     "id": "hypoallergen_adult_pferd",
@@ -381,9 +383,10 @@
     "me_quelle": "berechnet",
     "datenquelle": "LandFleisch Markenwelt Broschüre Hunde PDF",
     "futterstatus": "Alleinfutter",
-    "rechner_aktiv": true,
+    "rechner_aktiv": false,
     "besonderheit": "Standard",
-    "ui_linie": "Hypoallergen"
+    "ui_linie": "Hypoallergen",
+    "rechner_hinweis": "Produktlinie aktuell nicht für den Rechner freigegeben."
   },
   {
     "id": "hypoallergen_adult_ziege",
@@ -405,9 +408,10 @@
     "me_quelle": "berechnet",
     "datenquelle": "LandFleisch Markenwelt Broschüre Hunde PDF",
     "futterstatus": "Alleinfutter",
-    "rechner_aktiv": true,
+    "rechner_aktiv": false,
     "besonderheit": "Standard",
-    "ui_linie": "Hypoallergen"
+    "ui_linie": "Hypoallergen",
+    "rechner_hinweis": "Produktlinie aktuell nicht für den Rechner freigegeben."
   },
   {
     "id": "hypoallergen_adult_kamel",
@@ -429,9 +433,10 @@
     "me_quelle": "berechnet",
     "datenquelle": "LandFleisch Markenwelt Broschüre Hunde PDF",
     "futterstatus": "Alleinfutter",
-    "rechner_aktiv": true,
+    "rechner_aktiv": false,
     "besonderheit": "Standard",
-    "ui_linie": "Hypoallergen"
+    "ui_linie": "Hypoallergen",
+    "rechner_hinweis": "Produktlinie aktuell nicht für den Rechner freigegeben."
   },
   {
     "id": "trocken_adult_rind_reis",
@@ -546,9 +551,10 @@
     "me_quelle": "berechnet",
     "datenquelle": "LandFleisch Produktseite",
     "futterstatus": "Alleinfutter",
-    "rechner_aktiv": true,
+    "rechner_aktiv": false,
     "besonderheit": "Standard",
-    "ui_linie": "Softbrocken"
+    "ui_linie": "Softbrocken",
+    "rechner_hinweis": "Produktlinie aktuell nicht für den Rechner freigegeben."
   },
   {
     "id": "kraftbrocken",
@@ -570,8 +576,9 @@
     "me_quelle": "berechnet_10_prozent_feuchtigkeit",
     "datenquelle": "LandFleisch Produktseite, Feuchtigkeit geschätzt",
     "futterstatus": "Alleinfutter",
-    "rechner_aktiv": true,
+    "rechner_aktiv": false,
     "besonderheit": "Standard",
-    "ui_linie": "Kraftbrocken"
+    "ui_linie": "Kraftbrocken",
+    "rechner_hinweis": "Produktlinie aktuell nicht für den Rechner freigegeben."
   }
 ]
